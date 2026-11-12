@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="A 14-day interactive Japan itinerary with English map labels, lodging and dual-currency estimates.">
-<title>Japan Field Atlas</title>
+<title>Japan trip map</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.12.0/dist/maplibre-gl.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Text&display=swap">
 <style>
 :root{--paper:#fbfaf6;--white:#fffefa;--ink:#202a2b;--quiet:#546361;--line:#e0e4dc;--pine:#386765;--pine-dark:#254d4c;--mint:#e7efe8;--terra:#a35741;--sand:#f3eadb;--muted:#eef1eb;--shadow:0 3px 14px #243b3622;--radius:16px;font:15px/1.5 'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper)}
-*{box-sizing:border-box}body{margin:0}button,a,summary{ -webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ad674a;outline-offset:3px}a{color:var(--pine-dark);font-weight:700;text-underline-offset:3px}h1,h2,h3,h4,p{margin:0}h1,h2,.hero h2{font-family:'DM Serif Text',Georgia,serif;font-weight:400;line-height:1.05}h2{font-size:2.15rem}p+p{margin-top:.5em}
+*{box-sizing:border-box}body{margin:0}button,a,summary{ -webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ad674a;outline-offset:3px}a{color:var(--pine-dark);font-weight:700;text-underline-offset:3px}h1,h2,h3,h4,p{margin:0}h1,h2,.hero h2{font-family:'DM Serif Text',Georgia,serif;font-weight:400;line-height:1.05}h2{font-size:1.7rem}p+p{margin-top:.5em}
 .top{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 24px;border-bottom:1px solid var(--line);background:var(--paper);position:relative;z-index:3}
 .brand,.header-actions{display:flex;align-items:center;gap:14px}.brand h1{font-size:1.85rem;white-space:nowrap}.brand small,.eyebrow,.section-label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.brand small,.eyebrow{color:#8c5946}.seal{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--terra);color:var(--terra);border-radius:50%;font-family:Georgia,serif;font-size:1.3rem;flex:none}.stamp{background:var(--muted);border:1px solid var(--line);border-radius:99px;padding:8px 13px;font-size:.83rem;font-weight:700;white-space:nowrap}.header-actions>a{font-size:.86rem;text-decoration:none;white-space:nowrap}
 .layout{display:grid;grid-template-columns:425px minmax(0,1fr);height:calc(100dvh - 76px);min-height:420px}.sidebar{overflow:auto;padding:20px 20px 28px;border-right:1px solid var(--line);scrollbar-width:thin}.modes{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--muted);border-radius:17px;padding:5px;margin-bottom:19px}.modes button,.day,.stay-tab,.action,.map-action{border:1px solid transparent;background:transparent;border-radius:11px;padding:9px 10px;font-size:.87rem;font-weight:700}.modes button[aria-selected=true]{background:var(--white);border-color:#e7e8e0;box-shadow:0 2px 6px #233a3420}.modes button:hover,.stay-tab:hover,.action:hover{background:#e1ebe3}
 .day-scroll,.stay-scroll{display:flex;gap:7px;overflow:auto;padding:8px 1px 10px;scrollbar-width:thin}.day,.stay-tab{flex:none;background:var(--white);border-color:var(--line)}.day{width:58px;height:70px;display:grid;place-content:center;gap:1px;padding:6px}.day small{font-size:.62rem}.day b{font-size:1.18rem;line-height:1.1}.day[aria-pressed=true],.stay-tab[aria-pressed=true]{background:var(--pine);color:white;border-color:var(--pine)}
-.hero{height:174px;margin-top:12px;position:relative;overflow:hidden;border-radius:var(--radius);background:#356865;color:white;display:flex;align-items:end}.hero img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#101e20ef 0%,#152b2d88 34%,transparent 76%)}.hero>div{z-index:1;padding:15px 16px}.hero .eyebrow{color:#fff8e8}.hero h2{font-size:1.65rem;margin:4px 0}.hero p{font-size:.82rem;color:#f3f5e9}.chips,.actions{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.chip,.action{background:var(--white);border:1px solid var(--line);color:var(--pine-dark);text-decoration:none;padding:6px 9px;border-radius:9px;font-size:.79rem;font-weight:700}.chip.cost{background:#f4f7ef}.intro{margin:13px 0 15px;color:var(--quiet)}.stay-callout,.callout{padding:12px 13px;border:1px solid #d5e1d8;border-radius:13px;background:var(--mint);font-size:.88rem;margin:14px 0 17px}.stay-callout button{display:block;background:none;border:0;padding:4px 0 0;text-decoration:underline;color:var(--pine-dark);font-weight:700;text-underline-offset:3px}.stay-callout small{display:block;color:var(--quiet)}
+.hero{height:174px;margin-top:12px;position:relative;overflow:hidden;border-radius:var(--radius);background:#356865;color:white;display:flex;align-items:end}.hero img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#101e20ef 0%,#152b2d88 34%,transparent 76%)}.hero>div{z-index:1;padding:15px 16px}.hero .eyebrow{color:#fff8e8}.hero h2{font-size:1.65rem;margin:4px 0}.hero p{font-size:.82rem;color:#f3f5e9}.chips,.actions{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.chip,.action{background:var(--white);border:1px solid var(--line);color:var(--pine-dark);text-decoration:none;padding:6px 9px;border-radius:9px;font-size:.79rem;font-weight:700}.chip.cost{background:#f4f7ef}.intro{margin:13px 0 15px;color:var(--quiet)}.stay-callout,.callout{padding:12px 13px;border:1px solid #d5e1d8;border-radius:13px;background:var(--mint);font-size:.88rem;margin:14px 0 17px}.stay-callout button{display:block;background:none;border:0;padding:0;text-decoration:underline;color:var(--pine-dark);font-weight:700;text-underline-offset:3px}.stay-callout small{display:block;color:var(--quiet)}
 .section-label{display:flex;justify-content:space-between;gap:8px;margin:15px 0 8px}.places{display:grid;gap:7px}.place,.hotel,.budget-item{border:1px solid var(--line);background:var(--white);border-radius:13px}.place[aria-current=true]{border-color:#7ba397}.place-head{width:100%;display:grid;grid-template-columns:31px 1fr 16px;align-items:center;text-align:left;gap:8px;padding:10px 12px;border:0;background:transparent}.place-head small,.stay-tab small,.route-step small{display:block;color:var(--quiet);font-size:.73rem;font-weight:500}.place-head b{font-size:.93rem}.pin-num{width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:var(--mint);color:var(--pine-dark);font-size:.72rem;font-weight:700}.place-body{padding:0 12px 11px;color:var(--quiet);font-size:.86rem}.place-body img{display:block;width:100%;max-height:158px;object-fit:cover;border-radius:9px;margin:0 0 8px}.place-body strong{color:var(--ink)}.place-body .actions{margin:8px 0 0}.note,.foot{font-size:.76rem;color:var(--quiet);margin:12px 0}.foot{border-top:1px solid var(--line);padding-top:11px;margin-top:20px}
 .panel-title{margin:6px 0 9px}.route-step{display:grid;grid-template-columns:33px 1fr 18px;align-items:center;gap:8px;width:100%;margin:7px 0;text-align:left;padding:10px;border:1px solid var(--line);background:var(--white);border-radius:12px}.route-step:hover{border-color:#789c90}.route-step .pin-num{background:var(--sand);color:#8a4937}.stay-scroll{margin-bottom:7px}.stay-tab{text-align:left;max-width:145px}.stay-tab[aria-pressed=true] small{color:#e8f5ee}.hotel,.budget-item{padding:12px;margin:9px 0;font-size:.87rem}.hotel h4,.budget-item h3{font-size:1.05rem;margin:3px 0 5px}.hotel .eyebrow{font-size:.64rem}.hotel p,.budget-item p{color:var(--quiet)}.hotel .rates{background:var(--mint);padding:8px;border-radius:8px;margin-top:9px}.hotel .rates p{color:var(--ink)}.hotel .actions{margin:8px 0 0}.fx{font-size:.81rem;color:var(--quiet)}
 .map-area{position:relative;min-height:0;background:#b9d3df;isolation:isolate}.map-area #map{position:absolute;inset:0}.map-top,.map-action,.map-key,.map-note,.map-error{z-index:2;position:absolute;background:#fffef7f3;box-shadow:var(--shadow);border-radius:12px;border:1px solid #e3e9dc}.map-top{top:16px;left:16px;padding:11px 14px;max-width:min(280px,57%);pointer-events:none}.map-top small,.map-top strong{display:block}.map-top strong{font-size:1rem}.map-top .note{margin:2px 0 0;line-height:1.35}.map-action{top:16px;right:16px;white-space:nowrap;color:var(--pine-dark)}.map-key,.map-note{bottom:26px;padding:8px 10px;font-size:.72rem;color:var(--quiet)}.map-key{left:13px;display:flex;gap:10px;flex-wrap:wrap}.map-note{right:13px;max-width:255px}.map-key i{width:8px;height:8px;display:inline-block;border-radius:50%;margin-right:3px;background:var(--pine)}.map-key .optional{background:#987b41}.map-key .base{background:var(--terra)}.map-error{bottom:72px;left:14px;padding:7px 10px;font-size:.8rem}
@@ -27,7 +27,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.12.0/dist/maplibre-gl.js"></script>
 </head>
 <body>
-<header class="top"><div class="brand"><span class="seal" aria-hidden="true">JP</span><div><small>The Field Atlas / 2026</small><h1>Japan, beyond the checklist</h1></div></div><div class="header-actions"><span class="stamp">20 Nov – 3 Dec · 13 nights</span><a href="https://docs.google.com/document/d/1utxwXzeao2iQE4m3b61iQ29hARzeB86zT7853xJNnXM/edit?tab=t.l87m9uf3ur3i" target="_blank" rel="noopener noreferrer">↗ Written guide</a></div></header>
+<header class="top"><div class="brand"><span class="seal" aria-hidden="true">JP</span><div><h1>Japan trip map</h1></div></div><div class="header-actions"><span class="stamp">20 Nov – 3 Dec · 13 nights</span><a href="https://docs.google.com/document/d/1utxwXzeao2iQE4m3b61iQ29hARzeB86zT7853xJNnXM/edit?tab=t.l87m9uf3ur3i" target="_blank" rel="noopener noreferrer">↗ Written guide</a></div></header>
 <main class="layout">
 <aside class="sidebar" aria-label="Japan itinerary">
 <nav class="modes" role="tablist" aria-label="Itinerary views">
@@ -37,14 +37,14 @@
 <button type="button" id="mode-budget" role="tab" aria-controls="panel" data-mode="budget">Budget &amp; logistics</button>
 </nav>
 <section id="panel" role="tabpanel" aria-labelledby="mode-day"></section>
-<footer class="foot">Hotel prices are advertised rates or planning estimates. Map data © OpenStreetMap contributors. Photos are from Wikimedia Commons. <a href="https://cosmic-shortbread-6b508b.netlify.app/" target="_blank" rel="noopener noreferrer">Original field atlas</a>.</footer>
+<footer class="foot">Hotel rates are estimates. Photos from Wikimedia Commons. <a href="https://cosmic-shortbread-6b508b.netlify.app/" target="_blank" rel="noopener noreferrer">Original field atlas</a>.</footer>
 </aside>
 <section class="map-area" aria-label="Interactive Japan itinerary map">
 <div id="map"></div>
 <div class="map-top" aria-live="polite"><small class="eyebrow" id="map-kicker"></small><strong id="map-title"></strong><p class="note" id="map-description"></p></div>
 <button class="map-action" type="button" id="whole-map">⊕ Show all of Japan</button>
 <div class="map-key"><span><i></i>Today's stop</span><span><i class="optional"></i>Optional</span><span><i class="base"></i>Base / hotel</span></div>
-<div class="map-note">Lines connect stops in order. Use the transit links for directions.</div>
+<div class="map-note">Lines show stop order.</div>
 <div class="map-error" id="map-error" hidden>Basemap unavailable. Place and transit links are still available.</div>
 </section>
 </main>
@@ -54,12 +54,12 @@
       "day": "FRI",
       "month": "Nov",
       "number": 20,
-      "label": "FRI  NOV 20, 2026  TOKYO",
-      "title": "Touchdown in Tokyo",
+      "label": "FRI · Nov 20 · TOKYO",
+      "title": "Tokyo arrival",
       "base": "Overnight: Ueno / Nippori",
       "cost": "¥ 5k–8k + hotel",
       "tag": "Arrival",
-      "intro": "A gentle first afternoon after the flight: markets, temple lights and an early dinner.",
+      "intro": "Drop your bags near Ueno, then visit Ameyoko Market and Senso-ji Temple.",
       "hotel": "Sakura Hotel Nippori  Tokyo / first stay",
       "stay": 0,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Sensoji_2023.jpg/960px-Sensoji_2023.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -71,8 +71,7 @@
           "name": "Narita International Airport",
           "kind": "Airport",
           "description": [
-            "Why we're here: Arrival/departure at Terminal 1.",
-            "What to do: EVA Air flights; Skyliner/Narita Express connections.",
+            "Narita Terminal 1. Airport times are local to Tokyo (JST, UTC+9).",
             "Budget: ~¥2,500 train"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.772%2C140.3929",
@@ -88,8 +87,7 @@
           "name": "Ueno / Okachimachi",
           "kind": "Hotel base",
           "description": [
-            "Why we're here: Practical, well-connected Tokyo base with an everyday feel.",
-            "What to do: Ameyoko market, cafes, local restaurants, airport train.",
+            "Ameyoko market, cafes, local restaurants, airport train.",
             "Budget: Room ¥14k–27k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.7138%2C139.7767",
@@ -105,8 +103,7 @@
           "name": "Ameyoko market",
           "kind": "Market",
           "description": [
-            "Why we're here: One of Tokyo’s liveliest market streets, especially for a first afternoon.",
-            "What to do: Food stands, old-school stalls and casual counters.",
+            "Food stands, old-school stalls and casual counters.",
             "Budget: Snacks ¥500–2k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.7092%2C139.7747",
@@ -122,8 +119,7 @@
           "name": "Senso-ji Temple / Asakusa",
           "kind": "Temple & lanes",
           "description": [
-            "Why we're here: An iconic temple with atmospheric lanes when crowds thin.",
-            "What to do: Temple courtyard after dark; explore side streets beyond Nakamise.",
+            "Temple courtyard after dark; explore side streets beyond Nakamise.",
             "Budget: Free temple grounds"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.7148%2C139.7967",
@@ -140,12 +136,12 @@
       "day": "SAT",
       "month": "Nov",
       "number": 21,
-      "label": "SAT  NOV 21, 2026  TOKYO",
-      "title": "Old Tokyo, local streets",
+      "label": "SAT · Nov 21 · TOKYO",
+      "title": "East Tokyo",
       "base": "Overnight: Ueno / Nippori",
       "cost": "¥ 4k–8k + hotel",
       "tag": "Traditional",
-      "intro": "Follow the quieter east side of Tokyo from temple streets to craft workshops and older neighborhoods.",
+      "intro": "Walk from Asakusa through Kappabashi and Kuramae, then visit Nezu and Yanaka.",
       "hotel": "Sakura Hotel Nippori  Tokyo / first stay",
       "stay": 0,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Sensoji_2023.jpg/960px-Sensoji_2023.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -157,8 +153,7 @@
           "name": "Senso-ji Temple / Asakusa",
           "kind": "Temple & lanes",
           "description": [
-            "Why we're here: An iconic temple with atmospheric lanes when crowds thin.",
-            "What to do: Temple courtyard after dark; explore side streets beyond Nakamise.",
+            "Temple courtyard after dark; explore side streets beyond Nakamise.",
             "Budget: Free temple grounds"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.7148%2C139.7967",
@@ -174,8 +169,7 @@
           "name": "Kappabashi",
           "kind": "Shopping street",
           "description": [
-            "Why we're here: Japan’s cookware street is more distinctive than souvenir-heavy malls.",
-            "What to do: Ceramics, kitchen tools, knives, food replicas.",
+            "Ceramics, kitchen tools, knives, food replicas.",
             "Budget: Browsing free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.7154%2C139.789",
@@ -191,8 +185,7 @@
           "name": "Kuramae",
           "kind": "Craft district",
           "description": [
-            "Why we're here: Small design shops and quiet blocks by the river.",
-            "What to do: Coffee, leather goods, craft studios.",
+            "Coffee, leather goods, craft studios.",
             "Budget: ¥500–2k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.7044%2C139.7916",
@@ -208,8 +201,7 @@
           "name": "Nezu Shrine",
           "kind": "Shrine",
           "description": [
-            "Why we're here: A shrine in a surprisingly peaceful part of central Tokyo.",
-            "What to do: Vermilion shrine gates, gardens, neighborhood walking.",
+            "Vermilion shrine gates, gardens, neighborhood walking.",
             "Budget: Mostly free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.7196%2C139.7623",
@@ -225,8 +217,7 @@
           "name": "Yanaka Ginza",
           "kind": "Old neighborhood",
           "description": [
-            "Why we're here: Low-rise Tokyo, tiny stores and slower residential streets.",
-            "What to do: Explore Yanaka Ginza and adjoining back lanes.",
+            "Explore Yanaka Ginza and adjoining back lanes.",
             "Budget: Free; snacks extra"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.727%2C139.7662",
@@ -243,12 +234,12 @@
       "day": "SUN",
       "month": "Nov",
       "number": 22,
-      "label": "SUN  NOV 22, 2026  TOKYO",
-      "title": "Tokyo's modern contrast",
+      "label": "SUN · Nov 22 · TOKYO",
+      "title": "West Tokyo",
       "base": "Overnight: Ueno / Nippori",
       "cost": "¥ 5k–10k + hotel",
       "tag": "Neighborhoods",
-      "intro": "A deliberate contrast: sacred forest, creative streets and the neon energy of Tokyo at night.",
+      "intro": "Visit Meiji Shrine and Omotesando, then head to Shibuya or Shinjuku.",
       "hotel": "Sakura Hotel Nippori  Tokyo / first stay",
       "stay": 0,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Shibuya_Crossing%2C_Aerial.jpg/960px-Shibuya_Crossing%2C_Aerial.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -260,8 +251,7 @@
           "name": "Meiji Shrine",
           "kind": "Shrine & forest",
           "description": [
-            "Why we're here: A calm shrine forest near some of Tokyo’s busiest shopping streets.",
-            "What to do: Walk the broad wooded approach.",
+            "Walk the broad wooded approach.",
             "Budget: Grounds free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.6764%2C139.6993",
@@ -277,8 +267,7 @@
           "name": "Omotesando backstreets",
           "kind": "Neighborhood",
           "description": [
-            "Why we're here: Architecture, fashion and cafe streets without needing to shop.",
-            "What to do: Side streets, design shops, people watching.",
+            "Side streets, design shops, people watching.",
             "Budget: Free to browse"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.667%2C139.71",
@@ -294,9 +283,7 @@
           "name": "Shibuya",
           "kind": "Modern Tokyo",
           "description": [
-            "Why we're here: The sharp modern contrast to Tokyo’s traditional districts.",
-            "What to do: Crossing, street views and optional observation deck.",
-            "Budget: Deck costs extra"
+            "Crossing, street views and optional observation deck."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.6595%2C139.7005",
           "wiki": "https://en.wikipedia.org/wiki/Shibuya_Crossing",
@@ -311,8 +298,7 @@
           "name": "Shinjuku / Omoide Yokocho",
           "kind": "Nightlife",
           "description": [
-            "Why we're here: After dark, a classic neon and alley-food Tokyo scene.",
-            "What to do: Small eateries, station-area wander.",
+            "Small eateries, station-area wander.",
             "Budget: Food ¥1.5k–4k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.6938%2C139.7034",
@@ -329,12 +315,12 @@
       "day": "MON",
       "month": "Nov",
       "number": 23,
-      "label": "MON  NOV 23, 2026  TOKYO",
-      "title": "Gardens & local life",
+      "label": "MON · Nov 23 · TOKYO",
+      "title": "Tokyo gardens",
       "base": "Overnight: Ueno / Nippori",
       "cost": "¥ 4k–10k + hotel",
       "tag": "Holiday",
-      "intro": "On Labor Thanksgiving Day, take a flexible seasonal walk instead of trying to force busy tourist sights.",
+      "intro": "Choose a ginkgo walk or Rikugien Garden. North Kamakura is an alternative.",
       "hotel": "Sakura Hotel Nippori  Tokyo / first stay",
       "stay": 0,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Rikugien-10-2009-fujishirotoge02.jpg/960px-Rikugien-10-2009-fujishirotoge02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -346,8 +332,7 @@
           "name": "Meiji Outer Garden ginkgo avenue",
           "kind": "Autumn walk",
           "description": [
-            "Why we're here: Ginkgo trees often turn golden in late November.",
-            "What to do: A short seasonal stroll and photos.",
+            "A short seasonal stroll and photos.",
             "Budget: Free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.6748%2C139.7174",
@@ -363,8 +348,7 @@
           "name": "Rikugien Garden",
           "kind": "Garden",
           "description": [
-            "Why we're here: Elegant landscaped garden and a strong seasonal foliage choice.",
-            "What to do: Ponds, bridges and maple paths.",
+            "Ponds, bridges and maple paths.",
             "Budget: Admission ~¥300"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.733%2C139.7467",
@@ -380,8 +364,7 @@
           "name": "Kichijoji / Harmonica Yokocho",
           "kind": "Local nightlife",
           "description": [
-            "Why we're here: An independent neighborhood that feels different from Shibuya.",
-            "What to do: Compact food alleys and cafes.",
+            "Compact food alleys and cafes.",
             "Budget: ¥1.5k–4k meal"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.7037%2C139.5802",
@@ -398,12 +381,12 @@
       "day": "TUE",
       "month": "Nov",
       "number": 24,
-      "label": "TUE  NOV 24, 2026  KYOTO",
-      "title": "Arrival in old Kyoto",
+      "label": "TUE · Nov 24 · KYOTO",
+      "title": "Tokyo to Kyoto",
       "base": "Overnight: Kyoto Station / Shijo",
       "cost": "¥ 18k–24k incl train + hotel",
       "tag": "Illumination",
-      "intro": "Shinkansen to Kyoto, then walk the old hillside streets into an illuminated autumn temple evening.",
+      "intro": "Take the bullet train to Kyoto. Spend the afternoon in Higashiyama and visit Kiyomizu Temple in the evening.",
       "hotel": "Hotel M's Est Shijo-Karasuma  Kyoto / main base",
       "stay": 1,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Kiyomizu.jpg/960px-Kiyomizu.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -415,8 +398,7 @@
           "name": "Ueno / Okachimachi",
           "kind": "Hotel base",
           "description": [
-            "Why we're here: Practical, well-connected Tokyo base with an everyday feel.",
-            "What to do: Ameyoko market, cafes, local restaurants, airport train.",
+            "Ameyoko market, cafes, local restaurants, airport train.",
             "Budget: Room ¥14k–27k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.7138%2C139.7767",
@@ -432,8 +414,7 @@
           "name": "Kyoto Station / Shijo-Karasuma",
           "kind": "Hotel base",
           "description": [
-            "Why we're here: Stay centrally for trains while keeping old neighborhoods walkable.",
-            "What to do: JR connections to Nara, Uji and Kinosaki.",
+            "JR connections to Nara, Uji and Kinosaki.",
             "Budget: Room ¥18k–36k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.9858%2C135.7588",
@@ -449,8 +430,7 @@
           "name": "Sannenzaka & Ninenzaka",
           "kind": "Historic lanes",
           "description": [
-            "Why we're here: Preserved steep streets, traditional houses and hillside views.",
-            "What to do: Go before sunset; explore side lanes.",
+            "Go before sunset; explore side lanes.",
             "Budget: Free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.9966%2C135.7822",
@@ -466,8 +446,7 @@
           "name": "Gion / Shirakawa",
           "kind": "Historic district",
           "description": [
-            "Why we're here: Kyoto’s traditional lanes are most rewarding on foot.",
-            "What to do: Canal streets, architecture, dinner nearby.",
+            "Canal streets, architecture, dinner nearby.",
             "Budget: Free to stroll"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.0044%2C135.7779",
@@ -483,8 +462,7 @@
           "name": "Kiyomizu Temple",
           "kind": "Illuminated temple",
           "description": [
-            "Why we're here: A strong autumn Kyoto sight and a special night-viewing event.",
-            "What to do: Evening illumination (Nov 21–30, check hours).",
+            "Evening illumination (Nov 21–30, check hours).",
             "Budget: Ticket ¥500–1k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.9949%2C135.785",
@@ -501,12 +479,12 @@
       "day": "WED",
       "month": "Nov",
       "number": 25,
-      "label": "WED  NOV 25, 2026  KYOTO",
-      "title": "Tenjin-san antique market",
+      "label": "WED · Nov 25 · KYOTO",
+      "title": "Kitano market",
       "base": "Overnight: Kyoto Station / Shijo",
       "cost": "¥ 4k–9k + hotel",
       "tag": "Date-specific event",
-      "intro": "One of the most worthwhile local experiences: a once-a-month flea market with ceramics, textiles and street snacks.",
+      "intro": "Go to the monthly flea market at Kitano Tenmangu Shrine. Continue to Nishijin or Daitoku-ji if you have time.",
       "hotel": "Hotel M's Est Shijo-Karasuma  Kyoto / main base",
       "stay": 1,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Kitano-tenmangu_Kyoto_Japan41s3s4592.jpg/960px-Kitano-tenmangu_Kyoto_Japan41s3s4592.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -518,8 +496,7 @@
           "name": "Kitano Tenmangu Shrine market",
           "kind": "Special market",
           "description": [
-            "Why we're here: Tenjin-san flea market on Nov 25 is a rare date-specific anchor.",
-            "What to do: Antiques, vintage kimono, ceramics, food stalls.",
+            "Antiques, vintage kimono, ceramics, food stalls.",
             "Budget: Free entry; shopping extra"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.0311%2C135.7352",
@@ -535,8 +512,7 @@
           "name": "Nishijin textile quarter",
           "kind": "Craft quarter",
           "description": [
-            "Why we're here: Quiet blocks with generations of textile-making history.",
-            "What to do: Small textile shops and traditional streets.",
+            "Small textile shops and traditional streets.",
             "Budget: Mostly free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.03%2C135.7494",
@@ -552,9 +528,7 @@
           "name": "Daitoku-ji",
           "kind": "Temple complex",
           "description": [
-            "Why we're here: Subtemples and a calmer Zen atmosphere away from the main crowds.",
-            "What to do: Walk the temple complex and open gardens.",
-            "Budget: Some subtemples paid"
+            "Walk the temple complex and open gardens."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.0434%2C135.746",
           "wiki": "https://en.wikipedia.org/wiki/Daitoku-ji",
@@ -569,8 +543,7 @@
           "name": "Demachi Masugata arcade",
           "kind": "Shopping arcade",
           "description": [
-            "Why we're here: Local food shopping that feels more everyday than Nishiki.",
-            "What to do: Arcade snacks and riverside walk.",
+            "Arcade snacks and riverside walk.",
             "Budget: ¥500–2k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.0304%2C135.7704",
@@ -586,8 +559,7 @@
           "name": "Pontocho",
           "kind": "Evening lanes",
           "description": [
-            "Why we're here: Lanterned restaurant lanes by the Kamo River.",
-            "What to do: Window-shop menus and choose a small restaurant.",
+            "Window-shop menus and choose a small restaurant.",
             "Budget: Dinner ¥2k–5k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.0065%2C135.7705",
@@ -604,12 +576,12 @@
       "day": "THU",
       "month": "Nov",
       "number": 26,
-      "label": "THU  NOV 26, 2026  KYOTO",
-      "title": "Arashiyama's hidden north",
+      "label": "THU · Nov 26 · KYOTO",
+      "title": "Arashiyama",
       "base": "Overnight: Kyoto Station / Shijo",
       "cost": "¥ 5k–10k + hotel",
       "tag": "Temple & nature",
-      "intro": "The bamboo grove is only the introduction; keep walking into old hillside villages and quiet moss temples.",
+      "intro": "Start at Tenryu-ji Temple and the river, then walk north toward the quieter temples.",
       "hotel": "Hotel M's Est Shijo-Karasuma  Kyoto / main base",
       "stay": 1,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Tenryuji_Kyoto.jpg/960px-Tenryuji_Kyoto.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -621,9 +593,7 @@
           "name": "Tenryu-ji Temple and river",
           "kind": "Garden",
           "description": [
-            "Why we're here: The best-known Arashiyama garden and a natural jumping-off point.",
-            "What to do: Pond garden, riverbank and hills.",
-            "Budget: Temple admission"
+            "Pond garden, riverbank and hills."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.0158%2C135.6735",
           "wiki": "https://en.wikipedia.org/wiki/Tenry%C5%AB-ji",
@@ -638,9 +608,7 @@
           "name": "Gio-ji Moss Temple",
           "kind": "Moss temple",
           "description": [
-            "Why we're here: A lush and much quieter corner of Arashiyama.",
-            "What to do: Small moss garden and forest paths.",
-            "Budget: Temple admission"
+            "Small moss garden and forest paths."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.0263%2C135.6608",
           "wiki": "https://en.wikipedia.org/wiki/Gi%C5%8D-ji",
@@ -655,8 +623,7 @@
           "name": "Saga Toriimoto",
           "kind": "Historic village",
           "description": [
-            "Why we're here: Atmospheric preserved settlement past the main bamboo crowds.",
-            "What to do: Old houses and mountain-side lanes.",
+            "Old houses and mountain-side lanes.",
             "Budget: Free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.034%2C135.6642",
@@ -672,9 +639,7 @@
           "name": "Otagi Nenbutsu-ji Temple",
           "kind": "Temple",
           "description": [
-            "Why we're here: Hundreds of expressive carved stone figures make this memorable.",
-            "What to do: Explore the rakan statues in the hills.",
-            "Budget: Temple admission"
+            "Explore the rakan statues in the hills."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.0407%2C135.6729",
           "wiki": "https://en.wikipedia.org/wiki/Otagi_Nenbutsu-ji",
@@ -690,12 +655,12 @@
       "day": "FRI",
       "month": "Nov",
       "number": 27,
-      "label": "FRI  NOV 27, 2026  KYOTO",
-      "title": "Shrine mountain, sake & tea",
+      "label": "FRI · Nov 27 · KYOTO",
+      "title": "Fushimi and Uji",
       "base": "Overnight: Kyoto Station / Shijo",
       "cost": "¥ 5k–10k + hotel",
       "tag": "Regional towns",
-      "intro": "Three distinct places south of Kyoto: a mountain shrine, a canal-side brewing district and a historic tea town.",
+      "intro": "Visit Fushimi Inari early, then explore the brewing district or head to Uji for tea.",
       "hotel": "Hotel M's Est Shijo-Karasuma  Kyoto / main base",
       "stay": 1,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg/960px-Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -707,8 +672,7 @@
           "name": "Fushimi Inari Shrine",
           "kind": "Mountain shrine",
           "description": [
-            "Why we're here: Vermilion-gate trails become much calmer beyond the entrance.",
-            "What to do: Hike farther up the mountain before 8 AM.",
+            "Hike farther up the mountain before 8 AM.",
             "Budget: Free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.9671%2C135.7727",
@@ -724,9 +688,7 @@
           "name": "Fushimi sake district",
           "kind": "Canals & sake",
           "description": [
-            "Why we're here: Traditional brewing area with canals and different local scenery.",
-            "What to do: Sake museums, canal stroll, Otesuji arcade.",
-            "Budget: Tastings optional"
+            "Sake museums, canal stroll, Otesuji arcade."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.9286%2C135.761",
           "wiki": "https://en.wikipedia.org/wiki/Fushimi-ku%2C_Kyoto",
@@ -741,9 +703,7 @@
           "name": "Uji / Byodo-in Temple",
           "kind": "Tea town",
           "description": [
-            "Why we're here: Historic architecture, tea shops and a riverside setting.",
-            "What to do: Byodo-in, good matcha, Uji River.",
-            "Budget: Rail + entry + tea"
+            "Byodo-in, good matcha, Uji River."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.8894%2C135.8074",
           "wiki": "https://en.wikipedia.org/wiki/By%C5%8Dd%C5%8D-in",
@@ -759,12 +719,12 @@
       "day": "SAT",
       "month": "Nov",
       "number": 28,
-      "label": "SAT  NOV 28, 2026  NARA",
-      "title": "Ancient capital day trip",
+      "label": "SAT · Nov 28 · NARA",
+      "title": "Nara",
       "base": "Overnight: Kyoto Station / Shijo",
       "cost": "¥ 6k–11k + hotel",
       "tag": "Day trip",
-      "intro": "Walk through the giant temple hall, gardens, forest shrine and traditional merchant quarter. Sleep back in Kyoto.",
+      "intro": "See the Great Buddha, Isuien Garden and Kasuga Grand Shrine. Return to Kyoto that evening.",
       "hotel": "Hotel M's Est Shijo-Karasuma  Kyoto / main base",
       "stay": 1,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/T%C5%8Ddai-ji_Kon-d%C5%8D.jpg/960px-T%C5%8Ddai-ji_Kon-d%C5%8D.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -776,8 +736,7 @@
           "name": "Todai-ji Temple / Great Buddha",
           "kind": "Ancient temple",
           "description": [
-            "Why we're here: A massive wooden hall and one of Japan’s most significant Buddhist sights.",
-            "What to do: Great Buddha Hall and deer park.",
+            "Great Buddha Hall and deer park.",
             "Budget: Entry ~¥800"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.689%2C135.8398",
@@ -793,9 +752,7 @@
           "name": "Isuien Garden",
           "kind": "Garden",
           "description": [
-            "Why we're here: A calmer landscaped garden between Nara’s busiest sights.",
-            "What to do: Pond garden and mountain backdrop.",
-            "Budget: Entry paid"
+            "Pond garden and mountain backdrop."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.6854%2C135.8406",
           "wiki": "https://en.wikipedia.org/wiki/Isui-en",
@@ -810,8 +767,7 @@
           "name": "Kasuga Grand Shrine",
           "kind": "Forest shrine",
           "description": [
-            "Why we're here: Lantern-lined woodland paths and deep cultural history.",
-            "What to do: Forest walks, lantern approaches.",
+            "Forest walks, lantern approaches.",
             "Budget: Grounds often free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.6815%2C135.8488",
@@ -827,8 +783,7 @@
           "name": "Naramachi",
           "kind": "Merchant quarter",
           "description": [
-            "Why we're here: Historic merchant-house streets with independent stores.",
-            "What to do: Small shops, tea, traditional architecture.",
+            "Small shops, tea, traditional architecture.",
             "Budget: Mostly free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.6784%2C135.829",
@@ -845,12 +800,12 @@
       "day": "SUN",
       "month": "Nov",
       "number": 29,
-      "label": "SUN  NOV 29, 2026  KINOSAKI",
-      "title": "Traditional onsen overnight",
+      "label": "SUN · Nov 29 · KINOSAKI",
+      "title": "Kinosaki Hot Springs",
       "base": "Overnight: Kinosaki traditional inn",
       "cost": "~¥23k–47k incl rail/ryokan share",
       "tag": "Hot-spring stay",
-      "intro": "Arrive early enough for a cotton robe, several baths, a traditional inn dinner and a canal-side evening.",
+      "intro": "Take the train from Kyoto and check in early enough to visit the public baths.",
       "hotel": "Yamatoya  Kinosaki / ryokan night",
       "stay": 2,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Kinosaki_Onsen_by_day.jpg/960px-Kinosaki_Onsen_by_day.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -862,8 +817,7 @@
           "name": "Kyoto Station / Shijo-Karasuma",
           "kind": "Hotel base",
           "description": [
-            "Why we're here: Stay centrally for trains while keeping old neighborhoods walkable.",
-            "What to do: JR connections to Nara, Uji and Kinosaki.",
+            "JR connections to Nara, Uji and Kinosaki.",
             "Budget: Room ¥18k–36k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.9858%2C135.7588",
@@ -879,8 +833,7 @@
           "name": "Kinosaki Hot Springs village",
           "kind": "Hot-spring town",
           "description": [
-            "Why we're here: The place to slow down and experience a traditional bath-town overnight.",
-            "What to do: cotton robe walk, canal bridges, quiet evening.",
+            "cotton robe walk, canal bridges, quiet evening.",
             "Budget: Ryokan ~¥35k–80k / 2"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.6257%2C134.8118",
@@ -896,9 +849,7 @@
           "name": "Ichino-yu Public Bath",
           "kind": "Public bath",
           "description": [
-            "Why we're here: An easy bathhouse to pair with a canal-side stroll.",
-            "What to do: Relax in geothermal waters, then browse the town.",
-            "Budget: Pass often via ryokan"
+            "Relax in geothermal waters, then browse the town."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.6258%2C134.8115",
           "wiki": "https://en.wikipedia.org/wiki/Ichino-yu",
@@ -913,9 +864,7 @@
           "name": "Goshono-yu Public Bath",
           "kind": "Public bath",
           "description": [
-            "Why we're here: One of the famous public bathhouses in the onsen circuit.",
-            "What to do: Try a traditional bath; check operating days.",
-            "Budget: Pass often via ryokan"
+            "Try a traditional bath; check operating days."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.628%2C134.8095",
           "wiki": "https://en.wikipedia.org/wiki/Goshono-yu",
@@ -931,12 +880,12 @@
       "day": "MON",
       "month": "Nov",
       "number": 30,
-      "label": "MON  NOV 30, 2026  OSAKA",
-      "title": "Osaka, local-first",
+      "label": "MON · Nov 30 · OSAKA",
+      "title": "Kinosaki to Osaka",
       "base": "Overnight: Namba / Umeda",
       "cost": "¥ 10k–15k incl train + hotel",
       "tag": "Food & lights",
-      "intro": "Recover from the onsen, then explore Osaka's local shopping arcades and evening food districts.",
+      "intro": "Take the train to Osaka. Walk through Tenma or Nakazakicho, then have dinner near Dotonbori.",
       "hotel": "APA Hotel Osaka Temma  Osaka / last Kansai base",
       "stay": 3,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Osaka_Dotonbori_Ebisu_Bridge.jpg/960px-Osaka_Dotonbori_Ebisu_Bridge.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -948,8 +897,7 @@
           "name": "Kinosaki Hot Springs village",
           "kind": "Hot-spring town",
           "description": [
-            "Why we're here: The place to slow down and experience a traditional bath-town overnight.",
-            "What to do: cotton robe walk, canal bridges, quiet evening.",
+            "cotton robe walk, canal bridges, quiet evening.",
             "Budget: Ryokan ~¥35k–80k / 2"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.6257%2C134.8118",
@@ -965,8 +913,7 @@
           "name": "Osaka Namba / Umeda",
           "kind": "Hotel base",
           "description": [
-            "Why we're here: Compact base for energetic food nights and Kansai day trips.",
-            "What to do: Namba after dark; easy rail links.",
+            "Namba after dark; easy rail links.",
             "Budget: Room ¥12k–24k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.6673%2C135.5014",
@@ -982,8 +929,7 @@
           "name": "Nakazakicho",
           "kind": "Retro neighborhood",
           "description": [
-            "Why we're here: Small houses turned into cafes and shops.",
-            "What to do: Wander the backstreets rather than big malls.",
+            "Wander the backstreets rather than big malls.",
             "Budget: Free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.7059%2C135.5076",
@@ -999,8 +945,7 @@
           "name": "Tenjinbashisuji / Tenma",
           "kind": "Local arcade",
           "description": [
-            "Why we're here: Long shopping arcade with casual food and lived-in Osaka energy.",
-            "What to do: Sample small bites and side-street bars.",
+            "Sample small bites and side-street bars.",
             "Budget: ¥1.5k–4k food"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.7047%2C135.5109",
@@ -1016,8 +961,7 @@
           "name": "Hozenji Alley",
           "kind": "Historic alley",
           "description": [
-            "Why we're here: Small stone-paved lanes immediately beside busy Namba.",
-            "What to do: Moss-covered statue and intimate restaurant alley.",
+            "Moss-covered statue and intimate restaurant alley.",
             "Budget: Free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.6674%2C135.502",
@@ -1033,8 +977,7 @@
           "name": "Dotonbori",
           "kind": "Neon canals",
           "description": [
-            "Why we're here: Worth a quick evening look, not an entire day.",
-            "What to do: Canal lights, lively crowds; avoid overpriced tourist stalls.",
+            "Canal lights, lively crowds; avoid overpriced tourist stalls.",
             "Budget: Free to wander"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.6687%2C135.501",
@@ -1050,8 +993,7 @@
           "name": "Midosuji illumination",
           "kind": "Seasonal lights",
           "description": [
-            "Why we're here: Winter illuminations make an easy free evening addition.",
-            "What to do: Walk the illuminated avenue after dinner.",
+            "Walk the illuminated avenue after dinner.",
             "Budget: Free"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.688%2C135.499",
@@ -1068,12 +1010,12 @@
       "day": "TUE",
       "month": "Dec",
       "number": 1,
-      "label": "TUE  DEC 1, 2026  HIMEJI",
-      "title": "The castle day (or forest)",
+      "label": "TUE · Dec 1 · HIMEJI",
+      "title": "Himeji or Minoo",
       "base": "Overnight: Namba / Umeda",
       "cost": "¥ 6k–13k + hotel",
       "tag": "Choose A or B",
-      "intro": "Choose one: outstanding original castle and garden with Kobe on the way back, OR a maple-lined waterfall walk near Osaka.",
+      "intro": "Choose Himeji Castle and Koko-en Garden or the waterfall walk in Minoo.",
       "hotel": "APA Hotel Osaka Temma  Osaka / last Kansai base",
       "stay": 3,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Himeji_castle_in_may_2015.jpg/960px-Himeji_castle_in_may_2015.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -1085,8 +1027,7 @@
           "name": "Osaka Namba / Umeda",
           "kind": "Hotel base",
           "description": [
-            "Why we're here: Compact base for energetic food nights and Kansai day trips.",
-            "What to do: Namba after dark; easy rail links.",
+            "Namba after dark; easy rail links.",
             "Budget: Room ¥12k–24k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.6673%2C135.5014",
@@ -1102,9 +1043,7 @@
           "name": "Himeji Castle",
           "kind": "Castle",
           "description": [
-            "Why we're here: One of Japan's outstanding surviving castles.",
-            "What to do: Main keep, grounds and architecture.",
-            "Budget: Admission paid"
+            "Main keep, grounds and architecture."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.8394%2C134.6939",
           "wiki": "https://en.wikipedia.org/wiki/Himeji_Castle",
@@ -1119,9 +1058,7 @@
           "name": "Koko-en garden",
           "kind": "Garden",
           "description": [
-            "Why we're here: A beautiful landscaped garden right beside Himeji Castle.",
-            "What to do: Ponds and distinct garden rooms.",
-            "Budget: Entry paid"
+            "Ponds and distinct garden rooms."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.8378%2C134.6902",
           "wiki": "https://en.wikipedia.org/wiki/K%C5%8Dko-en",
@@ -1136,9 +1073,7 @@
           "name": "Kobe / Nada sake",
           "kind": "Port city",
           "description": [
-            "Why we're here: Port-town food and a historic sake region on the way back.",
-            "What to do: A sake museum or relaxed waterfront dinner.",
-            "Budget: Rail + food"
+            "A sake museum or relaxed waterfront dinner."
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.7125%2C135.25",
           "wiki": "https://en.wikipedia.org/wiki/Kobe",
@@ -1154,12 +1089,12 @@
       "day": "WED",
       "month": "Dec",
       "number": 2,
-      "label": "WED  DEC 2, 2026  TOKYO",
-      "title": "Return & optional festival",
+      "label": "WED · Dec 2 · TOKYO",
+      "title": "Osaka to Tokyo",
       "base": "Overnight: Ueno / Nippori",
       "cost": "¥ 19k–27k incl train + hotel",
       "tag": "Festival option",
-      "intro": "Return to Tokyo, leave luggage and optionally make a final long evening excursion for Chichibu's December 2 festival.",
+      "intro": "Take the bullet train to Tokyo and drop your bags. Chichibu Night Festival is optional.",
       "hotel": "Sakura Hotel Nippori  Tokyo / final night",
       "stay": 4,
       "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/ChichibuFes1.jpg/960px-ChichibuFes1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -1171,8 +1106,7 @@
           "name": "Osaka Namba / Umeda",
           "kind": "Hotel base",
           "description": [
-            "Why we're here: Compact base for energetic food nights and Kansai day trips.",
-            "What to do: Namba after dark; easy rail links.",
+            "Namba after dark; easy rail links.",
             "Budget: Room ¥12k–24k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=34.6673%2C135.5014",
@@ -1188,8 +1122,7 @@
           "name": "Ueno / Okachimachi",
           "kind": "Hotel base",
           "description": [
-            "Why we're here: Practical, well-connected Tokyo base with an everyday feel.",
-            "What to do: Ameyoko market, cafes, local restaurants, airport train.",
+            "Ameyoko market, cafes, local restaurants, airport train.",
             "Budget: Room ¥14k–27k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.7138%2C139.7767",
@@ -1206,13 +1139,13 @@
       "day": "THU",
       "month": "Dec",
       "number": 3,
-      "label": "THU  DEC 3, 2026  TOKYO",
+      "label": "THU · Dec 3 · TOKYO",
       "title": "Narita departure",
-      "base": "Flight: EVA Air BR197",
+      "base": "EVA Air BR197 · Tokyo to Taipei",
       "cost": "¥ 3k–5k",
       "tag": "Departure",
-      "intro": "Flight leaves Narita Terminal 1 at 14:00. Aim to reach the terminal around 10:30–11:00. No distant sightseeing.",
-      "hotel": "No hotel tonight. Head to Narita for the 14:00 flight.",
+      "intro": "Aim for Narita Terminal 1 at 10:30–11:00 AM Tokyo time. EVA Air BR197 leaves at 2:00 PM Tokyo time (JST, UTC+9) for Taipei (Taiwan time, UTC+8).",
+      "hotel": "",
       "stay": -1,
       "photo": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Narita_Nemzetk%C3%B6zi_Rep%C3%BCl%C5%91t%C3%A9r.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
       "transit": "https://www.google.com/maps/dir/?api=1&origin=35.7138%2C139.7767&destination=35.772%2C140.3929&travelmode=transit",
@@ -1223,8 +1156,7 @@
           "name": "Ueno / Okachimachi",
           "kind": "Hotel base",
           "description": [
-            "Why we're here: Practical, well-connected Tokyo base with an everyday feel.",
-            "What to do: Ameyoko market, cafes, local restaurants, airport train.",
+            "Ameyoko market, cafes, local restaurants, airport train.",
             "Budget: Room ¥14k–27k"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.7138%2C139.7767",
@@ -1240,8 +1172,7 @@
           "name": "Narita International Airport",
           "kind": "Airport",
           "description": [
-            "Why we're here: Arrival/departure at Terminal 1.",
-            "What to do: EVA Air flights; Skyliner/Narita Express connections.",
+            "Narita Terminal 1. Airport times are local to Tokyo (JST, UTC+9).",
             "Budget: ~¥2,500 train"
           ],
           "maps": "https://www.google.com/maps/search/?api=1&query=35.772%2C140.3929",
@@ -1260,10 +1191,9 @@
       "label": "Tokyo",
       "dates": "20–24 Nov",
       "meta": "20–24 NOV · 4 NIGHTS · 2 PEOPLE",
-      "title": "Tokyo / first stay",
+      "title": "Tokyo",
       "details": [
-        "Keep one old-Tokyo base for Asakusa, Yanaka, Ueno and Tokyo’s west side.",
-        "Budget: Four room nights; cheapest published-room example: ¥32,000 total for 2 at Sakura if that plan is available."
+        "Ueno and Nippori make airport trains and old Tokyo easy to reach."
       ],
       "pos": [
         139.762,
@@ -1277,29 +1207,25 @@
       "cards": [
         {
           "heading": "Sakura Hotel Nippori",
-          "badge": "Best budget",
+          "badge": "",
           "details": [
-            "woven mats and floor bedding twin rooms in Yanaka–Sendagi, near the old neighborhoods you plan to explore. Good for stretching the budget; a private ROOM is not a private bathroom.",
-            "Getting around: Walkable to Sendagi and Nippori station area; easy access to Yanaka Ginza and Narita trains.",
-            "Room: Japanese-style twin room; shared showers/toilets. Check exact room's occupancy and amenities.",
-            "Watch out: Shared bath and simple hostel-style facilities."
+            "Japanese-style twin with floor bedding and a shared bathroom, near Sendagi and Nippori."
           ],
           "rates": [
-            "From ¥8,000 per room/night  direct-site advertised start",
-            "Budget target for Tokyo: ¥8k–16k/night if available"
+            "From ¥8,000 per room per night."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Room photos",
+              "url": "https://www.sakura-hotel.co.jp/news/new-japanese-room-has-been-launched-at-sakura-hotel-nippori/"
+            },
+            {
+              "text": "Hotel website",
               "url": "https://www.sakura-hotel.co.jp/nippori/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Sakura%20Hotel%20Nippori%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://www.sakura-hotel.co.jp/nippori/"
             }
           ],
           "pos": [
@@ -1309,29 +1235,25 @@
         },
         {
           "heading": "Ryokan Sawanoya",
-          "badge": "Best Japanese experience",
+          "badge": "",
           "details": [
-            "Real Tokyo old-town hospitality with woven mats and floor bedding rooms and a traditional inn atmosphere. Far more distinctive than a generic budget chain.",
-            "Getting around: 7-minute walk from Nezu Station; north of Ueno Park. A longer ride/walk for the airport than near Nippori station.",
-            "Room: 6-tatami Japanese room: bathroom shared at ¥16,280, or ensuite bathroom at ¥17,930 for 2; private reservable baths are also available.",
-            "Watch out: Only two ensuite rooms; book early and verify room type."
+            "Traditional inn near Nezu. Two-person rooms have floor bedding and a choice of shared or private bathroom."
           ],
           "rates": [
-            "¥16,280 for 2 (shared); ¥17,930 for 2 (ensuite)  official listed rate",
-            "Published fixed rate; availability not verified"
+            "¥16,280 for two with a shared bathroom or ¥17,930 with a private bathroom."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Room photos",
+              "url": "https://www.sawanoya.com/pages/general/ryoukineigo.html"
+            },
+            {
+              "text": "Hotel website",
               "url": "https://secure02.blue.shared-server.net/www.sawanoya.com/reserve/index.php"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Ryokan%20Sawanoya%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://www.sawanoya.com/pages/general/ryoukineigo.html"
             }
           ],
           "pos": [
@@ -1341,29 +1263,25 @@
         },
         {
           "heading": "The Edo Sakura",
-          "badge": "Comfortable upgrade",
+          "badge": "",
           "details": [
-            "Traditional townhouse architecture, Japanese rooms, tea culture and reservable private bath—with in-room showers/toilets.",
-            "Getting around: 5-minute walk from Iriya Metro, 10 minutes from Uguisudani JR; Ueno is reachable on foot.",
-            "Room: Book Japanese-style woven mats and floor bedding room if available; ensure two-person occupancy.",
-            "Watch out: More comfortable, less budget-focused; bath sessions cost extra."
+            "Japanese-style rooms near Iriya, with private bathrooms. Reserve a private bath separately."
           ],
           "rates": [
-            "Check your exact dates  no reliable Nov 20–24 quote",
-            "Likely above the hostel-budget option"
+            "Check the room price for your dates."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Room photos",
+              "url": "https://www.tokyoedosakura.com/rooms/"
+            },
+            {
+              "text": "Hotel website",
               "url": "https://www.tokyoedosakura.com/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=The%20Edo%20Sakura%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://www.tokyoedosakura.com/about/"
             }
           ],
           "pos": [
@@ -1377,10 +1295,9 @@
       "label": "Kyoto",
       "dates": "24–29 Nov",
       "meta": "24–29 NOV · 5 NIGHTS · 2 PEOPLE",
-      "title": "Kyoto / main base",
+      "title": "Kyoto",
       "details": [
-        "Shijo–Karasuma sits between rail to Arashiyama, Kyoto Station for Nara/Uji and downtown evening walks.",
-        "Budget: Planning band ~¥90,000–180,000 for two across 5 nights; NOT a date-specific quotation."
+        "Shijo–Karasuma is convenient for downtown Kyoto and day trips."
       ],
       "pos": [
         135.76,
@@ -1394,29 +1311,21 @@
       "cards": [
         {
           "heading": "Hotel M's Est Shijo-Karasuma",
-          "badge": "Lowest-fuss value",
+          "badge": "",
           "details": [
-            "Likely the best central-value balance for 5 sightseeing-heavy days: save time and money on commuting instead of paying to sleep beside a famous temple.",
-            "Getting around: 1-minute walk to Shijo subway and Karasuma Hankyu. Handy for Kyoto Station, markets, old lanes and Arashiyama.",
-            "Room: Small private double/twin, ensuite bath. If sharing with a friend, verify you are not booking a narrow semi-double bed.",
-            "Watch out: Modern practical hotel, not a traditional ryokan."
+            "A compact hotel by Shijo and Karasuma stations. Check the two-person room type."
           ],
           "rates": [
-            "General off-peak listings from ~¥9,100 for 2; NOT a foliage-week quote",
-            "Budget for foliage week ~¥18k–30k/room/night"
+            "General rates from about ¥9,100 for two. Budget ¥18k–30k per room per night for this stay."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Hotel website",
               "url": "https://kyohotel.jp/en/hotel/msest-shijokarasuma-en/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Hotel%20M%27s%20Est%20Shijo-Karasuma%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://kyohotel.jp/en/hotel/msest-shijokarasuma-en/"
             }
           ],
           "pos": [
@@ -1426,29 +1335,21 @@
         },
         {
           "heading": "Hotel Resol Kyoto Shijo Muromachi",
-          "badge": "Best atmosphere / value",
+          "badge": "",
           "details": [
-            "Shoes-off Japanese rooms, warm Kyoto architecture and a quieter location near textile streets, without losing access to both main train lines.",
-            "Getting around: Shijo subway Exit 6 about 2 min walk; Karasuma Hankyu a few minutes.",
-            "Room: 15 m² double or ~20–21 m² twin; shoes-off modern Japanese interior.",
-            "Watch out: Excellent central placement, but autumn availability can vanish."
+            "Japanese-style rooms near Shijo Station. Twin rooms are about 20–21 m²."
           ],
           "rates": [
-            "General listed rates from ~¥9,600 for 2; NOT Nov 24–29 rate",
-            "Compare against M's: a modest premium is worthwhile"
+            "General rates from about ¥9,600 for two. Check the price for Nov 24–29."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Hotel website",
               "url": "https://en.www.resol-hotel.jp/kyoto-s/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Hotel%20Resol%20Kyoto%20Shijo%20Muromachi%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://en.www.resol-hotel.jp/kyoto-s/rooms/"
             }
           ],
           "pos": [
@@ -1458,29 +1359,21 @@
         },
         {
           "heading": "Sotetsu Fresa Inn Kyoto-Shijokarasuma",
-          "badge": "Clean dependable backup",
+          "badge": "",
           "details": [
-            "A well-reviewed no-frills chain in virtually the same convenient Shijo–Karasuma rail catchment as the first two.",
-            "Getting around: 2 minutes to Shijo Station and Karasuma Station; frequent subway and Hankyu services.",
-            "Room: Modern private ensuite room; select a true twin if you need separate beds.",
-            "Watch out: Less traditional decor, strong practical value."
+            "A short walk from Shijo and Karasuma stations. Look for a twin room for two adults."
           ],
           "rates": [
-            "Rates vary; no confirmed rate for your 5-night booking",
-            "Budget for foliage week ~¥18k–36k/room/night"
+            "Budget ¥18k–36k per room per night."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Hotel website",
               "url": "https://sotetsu-hotels.com/en/fresa-inn/karasuma/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Sotetsu%20Fresa%20Inn%20Kyoto-Shijokarasuma%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://sotetsu-hotels.com/fresa-inn/datas/media/karasuma/en_karasuma_map.pdf"
             }
           ],
           "pos": [
@@ -1494,10 +1387,9 @@
       "label": "Kinosaki",
       "dates": "29–30 Nov",
       "meta": "29–30 NOV · 1 NIGHT · 2 PEOPLE",
-      "title": "Kinosaki / ryokan night",
+      "title": "Kinosaki",
       "details": [
-        "Stay in the onsen village itself; no car needed. This is your most traditional overnight.",
-        "Budget: Advertised no-meal plans from ¥15,620–27,500 for two; multi-course dinner plans cost more."
+        "Stay in the village to walk between bathhouses."
       ],
       "pos": [
         134.815,
@@ -1511,29 +1403,21 @@
       "cards": [
         {
           "heading": "Kourakuen (Korakuen)",
-          "badge": "Cheapest published starting rate",
+          "badge": "",
           "details": [
-            "Real Japanese tatami rooms, private baths, riverside setting and a public-bath pass—without paying for a compulsory crab banquet.",
-            "Getting around: Officially ~7-minute walk from Kinosaki Onsen Station; at the entrance to the main town, so some bathhouses are farther away.",
-            "Room: Japanese 8-tatami mountain-view room without meals (no bath in room). Bathhouse pass included; optional dinner plans.",
-            "Watch out: Best if you will eat independently; book dinner plan separately if that experience matters."
+            "Traditional inn with floor bedding. The room-only plan includes a public bathhouse pass."
           ],
           "rates": [
-            "From ¥7,810/person = ¥15,620 for 2  room only, advertised start",
-            "Sunday 29 Nov actual quote and space unverified"
+            "Room only from ¥15,620 for two."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Hotel website",
               "url": "https://visitkinosaki.com/stay/kourakuen/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Kourakuen%20(Korakuen)%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://visitkinosaki.com/stay/kourakuen/room/?CheckIn_Day=&CheckIn_Month=&CheckIn_Year=&RateType=&RoomTypeNo=8&StayDate=&StayNights=&StayNinzu=&StayRooms=&mode=room_detail"
             }
           ],
           "pos": [
@@ -1543,29 +1427,21 @@
         },
         {
           "heading": "Yamatoya",
-          "badge": "My best fit for you",
+          "badge": "",
           "details": [
-            "This is the Japan experience to prioritize: old wooden inn, cypress bath, wooden-clog streets and two famous public bathhouses a short stroll away.",
-            "Getting around: Town center: about 30 seconds–2 minutes from Ichino-yu and Goshono-yu; station farther than Kourakuen.",
-            "Room: Japanese tatami room; official room-only plan includes Kinosaki public baths. Confirm meal upgrades and bathroom type.",
-            "Watch out: Central old-building character; ask about steep stairs, bathroom and dinner cutoff."
+            "Traditional inn near the public baths. A bathhouse pass is included in the room-only plan."
           ],
           "rates": [
-            "From ¥9,900/person = ¥19,800 for 2  room only advertised start",
-            "Sunday 29 Nov availability not verified"
+            "Room only from ¥19,800 for two."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Hotel website",
               "url": "https://visitkinosaki.com/stay/yamatoya/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Yamatoya%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://www.visitkinosaki.com/stay/yamatoya/room/?CheckIn_Day=&CheckIn_Month=&CheckIn_Year=&RateType=&RoomTypeNo=3&StayDate=&StayNights=&StayNinzu=&StayRooms=&mode=room_detail"
             }
           ],
           "pos": [
@@ -1575,29 +1451,21 @@
         },
         {
           "heading": "Mikuniya",
-          "badge": "Bath & meal upgrade",
+          "badge": "",
           "details": [
-            "A small traditional ryokan with three private baths and the option of a proper Japanese multi-course dinner dinner.",
-            "Getting around: ~3-minute walk from train station. Good if you arrive with luggage and want easy morning departure.",
-            "Room: Japanese room with futons, toilet/washbasin; private onsen baths shared by reservation/availability. Rates differ by meal plan.",
-            "Watch out: Worth upgrading if one traditional full-service traditional inn dinner is a priority."
+            "Traditional inn with room-only and dinner plans. Compare the meal options before booking."
           ],
           "rates": [
-            "From ¥13,750/person room only; ¥27,500/person with multi-course dinner  listed starts",
-            "For 2: from ¥27,500 room-only or ¥55,000 with full board"
+            "From ¥27,500 for two room-only or ¥55,000 with meals."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Hotel website",
               "url": "https://visitkinosaki.com/stay/mikuniya/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Mikuniya%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://visitkinosaki.com/stay/mikuniya/room/?CheckIn_Day=&CheckIn_Month=&CheckIn_Year=&RateType=&RoomTypeNo=4&StayDate=&StayNights=&StayNinzu=&StayRooms=&mode=room_detail"
             }
           ],
           "pos": [
@@ -1611,10 +1479,9 @@
       "label": "Osaka",
       "dates": "30 Nov – 2 Dec",
       "meta": "30 NOV – 2 DEC · 2 NIGHTS · 2 PEOPLE",
-      "title": "Osaka / last Kansai base",
+      "title": "Osaka",
       "details": [
-        "Prefer Tenma/Umeda: direct arrival from Kinosaki, simple Himeji excursion and easy Tokyo return.",
-        "Budget: Planning band ~¥18,000–36,000 for two across two nights at a basic hotel."
+        "Tenma and Umeda are convenient for regional trains."
       ],
       "pos": [
         135.513,
@@ -1628,29 +1495,21 @@
       "cards": [
         {
           "heading": "APA Hotel Osaka Temma",
-          "badge": "Cheapest practical pick",
+          "badge": "",
           "details": [
-            "Small-but-functional Japanese business rooms and a large indoor/outdoor bath. One stop from Osaka Station, close to the local food area you want to explore.",
-            "Getting around: 6-minute walk from JR Tenma, one station to JR Osaka for Himeji/next-day shinkansen connection.",
-            "Room: Choose a twin if desired; standard doubles can be very compact. Public bath is communal and subject to house rules.",
-            "Watch out: Bath facilities do not mean every room has a large private bath."
+            "Budget hotel in Tenma with a public bath. Check twin-room availability."
           ],
           "rates": [
-            "General-date offers from ~¥7,450/2; NOT Nov 30–Dec 2",
-            "Practical target ~¥9k–18k/room/night"
+            "General rates from about ¥7,450 for two. Budget ¥9k–18k per room per night."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Hotel website",
               "url": "https://www3.apahotel.com/hotel/kansai/osaka/osakatenma/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=APA%20Hotel%20Osaka%20Temma%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://www.apahotel.com/hotel/kansai/osaka/osakatenma/"
             }
           ],
           "pos": [
@@ -1660,29 +1519,21 @@
         },
         {
           "heading": "Toyoko Inn Osaka Umeda Higashi",
-          "badge": "Breakfast & easy metro",
+          "badge": "",
           "details": [
-            "Reliable private rooms and included breakfast right by Minamimorimachi, well positioned for Tenjinbashisuji's local market streets.",
-            "Getting around: 3-minute walk from Minamimorimachi; one metro station from Higashi-Umeda; next-day Shinkansen via Osaka/Shin-Osaka.",
-            "Room: Small ensuite double or twin; breakfast is included.",
-            "Watch out: Best reliability, not a ryokan experience."
+            "Budget hotel near Minami-Morimachi with breakfast included. Look for a twin room."
           ],
           "rates": [
-            "Official room pricing varies by date; no exact Nov 30–Dec 2 quote",
-            "Practical target ~¥10k–18k/room/night"
+            "Budget ¥10k–18k per room per night."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Hotel website",
               "url": "https://www.toyoko-inn.com/eng/search/detail/00129/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Toyoko%20Inn%20Osaka%20Umeda%20Higashi%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://www.toyoko-inn.com/eng/search/detail/00129/"
             }
           ],
           "pos": [
@@ -1692,29 +1543,21 @@
         },
         {
           "heading": "Onyado Nono Namba Natural Hot Spring",
-          "badge": "Japanese-style splurge",
+          "badge": "",
           "details": [
-            "Shoes-off Japanese-style hotel with a hot-spring bath, 2 minutes from Nipponbashi and steps from Namba food streets.",
-            "Getting around: Better for nightlife and Namba food; less convenient than Umeda for Himeji and Shin-Osaka train days.",
-            "Room: Ensuite modern hotel room plus communal hot spring bath/sauna. Check room-specific breakfast policies.",
-            "Watch out: Optional upgrade only if you want Osaka to be another bathing experience."
+            "Traditional-style hotel near Namba with a hot-spring bath."
           ],
           "rates": [
-            "Booker-dependent; no verified Nov 30–Dec 2 rate",
-            "Likely notably more than APA / Toyoko"
+            "Check the room price for your dates."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Hotel website",
               "url": "https://dormy-hotels.com/en/dormyinn/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Onyado%20Nono%20Namba%20Natural%20Hot%20Spring%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://www.booking.com/dormy_inn/district/jp/osaka/chuoward.html"
             }
           ],
           "pos": [
@@ -1728,10 +1571,9 @@
       "label": "Tokyo (last)",
       "dates": "2–3 Dec",
       "meta": "2–3 DEC · 1 NIGHT · 2 PEOPLE",
-      "title": "Tokyo / final night",
+      "title": "Tokyo before departure",
       "details": [
-        "Nippori/Ueno keeps Narita access manageable for the 14:00 flight and allows an optional Chichibu evening.",
-        "Budget: Cheapest published-room example: from ¥8,000 for two at Sakura, if available."
+        "Stay near Ueno or Nippori for the morning airport train."
       ],
       "pos": [
         139.762,
@@ -1745,29 +1587,25 @@
       "cards": [
         {
           "heading": "Sakura Hotel Nippori",
-          "badge": "Best budget",
+          "badge": "",
           "details": [
-            "woven mats and floor bedding twin rooms in Yanaka–Sendagi, near the old neighborhoods you plan to explore. Good for stretching the budget; a private ROOM is not a private bathroom.",
-            "Getting around: Walkable to Sendagi and Nippori station area; easy access to Yanaka Ginza and Narita trains.",
-            "Room: Japanese-style twin room; shared showers/toilets. Check exact room's occupancy and amenities.",
-            "Watch out: Shared bath and simple hostel-style facilities."
+            "Japanese-style twin with floor bedding and a shared bathroom, near Sendagi and Nippori."
           ],
           "rates": [
-            "From ¥8,000 per room/night  direct-site advertised start",
-            "Budget target for Tokyo: ¥8k–16k/night if available"
+            "From ¥8,000 per room per night."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Room photos",
+              "url": "https://www.sakura-hotel.co.jp/news/new-japanese-room-has-been-launched-at-sakura-hotel-nippori/"
+            },
+            {
+              "text": "Hotel website",
               "url": "https://www.sakura-hotel.co.jp/nippori/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Sakura%20Hotel%20Nippori%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://www.sakura-hotel.co.jp/nippori/"
             }
           ],
           "pos": [
@@ -1777,29 +1615,25 @@
         },
         {
           "heading": "Ryokan Sawanoya",
-          "badge": "Best Japanese experience",
+          "badge": "",
           "details": [
-            "Real Tokyo old-town hospitality with woven mats and floor bedding rooms and a traditional inn atmosphere. Far more distinctive than a generic budget chain.",
-            "Getting around: 7-minute walk from Nezu Station; north of Ueno Park. A longer ride/walk for the airport than near Nippori station.",
-            "Room: 6-tatami Japanese room: bathroom shared at ¥16,280, or ensuite bathroom at ¥17,930 for 2; private reservable baths are also available.",
-            "Watch out: Only two ensuite rooms; book early and verify room type."
+            "Traditional inn near Nezu. Two-person rooms have floor bedding and a choice of shared or private bathroom."
           ],
           "rates": [
-            "¥16,280 for 2 (shared); ¥17,930 for 2 (ensuite)  official listed rate",
-            "Published fixed rate; availability not verified"
+            "¥16,280 for two with a shared bathroom or ¥17,930 with a private bathroom."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Room photos",
+              "url": "https://www.sawanoya.com/pages/general/ryoukineigo.html"
+            },
+            {
+              "text": "Hotel website",
               "url": "https://secure02.blue.shared-server.net/www.sawanoya.com/reserve/index.php"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=Ryokan%20Sawanoya%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://www.sawanoya.com/pages/general/ryoukineigo.html"
             }
           ],
           "pos": [
@@ -1809,29 +1643,25 @@
         },
         {
           "heading": "The Edo Sakura",
-          "badge": "Comfortable upgrade",
+          "badge": "",
           "details": [
-            "Traditional townhouse architecture, Japanese rooms, tea culture and reservable private bath—with in-room showers/toilets.",
-            "Getting around: 5-minute walk from Iriya Metro, 10 minutes from Uguisudani JR; Ueno is reachable on foot.",
-            "Room: Book Japanese-style woven mats and floor bedding room if available; ensure two-person occupancy.",
-            "Watch out: More comfortable, less budget-focused; bath sessions cost extra."
+            "Japanese-style rooms near Iriya, with private bathrooms. Reserve a private bath separately."
           ],
           "rates": [
-            "Check your exact dates  no reliable Nov 20–24 quote",
-            "Likely above the hostel-budget option"
+            "Check the room price for your dates."
           ],
           "links": [
             {
-              "text": "↗ Check rooms · official",
+              "text": "Room photos",
+              "url": "https://www.tokyoedosakura.com/rooms/"
+            },
+            {
+              "text": "Hotel website",
               "url": "https://www.tokyoedosakura.com/"
             },
             {
-              "text": "Exact Google Maps",
+              "text": "Map",
               "url": "https://www.google.com/maps/search/?api=1&query=The%20Edo%20Sakura%2C%20Japan"
-            },
-            {
-              "text": "Rate / hotel source",
-              "url": "https://www.tokyoedosakura.com/about/"
             }
           ],
           "pos": [
@@ -1840,36 +1670,6 @@
           ]
         }
       ]
-    }
-  ],
-  "budget": [
-    {
-      "title": "🏨 Tokyo  5 nights total",
-      "text": "See the Where to stay tab: Sakura Hotel Nippori advertises Japanese twin rooms from ¥8,000 for two (shared bathroom); Ryokan Sawanoya lists ¥16,280 for two (shared bathroom) or ¥17,930 (ensuite). These are published room rates, subject to availability."
-    },
-    {
-      "title": "⛩️ Kyoto  5 nights",
-      "text": "Shijo–Karasuma is the optimal base, not deep Gion. Compare Hotel M’s Est Shijo-Karasuma, Hotel Resol Kyoto Shijo Muromachi, and Sotetsu Fresa Inn. Rough autumn planning range ¥18k–36k per room/night; do not confuse this with general off-season starting rates."
-    },
-    {
-      "title": "♨️ Kinosaki Onsen  1 night",
-      "text": "Save money with a traditional inn without meals: Kourakuen advertises from ¥15,620 for two, Yamatoya from ¥19,800 for two, both with bathhouse passes. A proper full-board multi-course dinner stay may be ¥55k+; check November 29 actual rate and dinner availability."
-    },
-    {
-      "title": "🍢 Osaka  2 nights",
-      "text": "For this route, Tenma/Umeda is smarter than Namba: arrival from Kinosaki, Himeji trip and Tokyo shinkansen are simpler. APA Hotel Osaka Temma (public bath) and Toyoko Inn Osaka Umeda Higashi (breakfast) are budget picks. Estimate ¥9k–18k/room/night, not live rates."
-    },
-    {
-      "title": "🚅 Transport & daily spending",
-      "text": "Major transport + city trains: ~¥45k–65k/person; food ~¥40k–75k; paid sights/extras ~¥10k–20k. A practical low-cost scenario could be lower than the original ¥204k–381k/person range if the budget rooms are actually available; neither number is a live quote, excluding international airfare and big shopping."
-    },
-    {
-      "title": "✈️ Your return flight",
-      "text": "Thu 3 Dec, 14:00 from Narita Terminal 1. Aim to reach the terminal around 10:30–11:00; don't sleep in Osaka that night."
-    },
-    {
-      "title": "📌 Book these ahead",
-      "text": "Kyoto lodging, Kinosaki ryokan, return train from Chichibu (if attending), any timed-entry observation decks and your Kyoto ↔ Kinosaki limited express."
     }
   ],
   "extras": {
@@ -1883,8 +1683,7 @@
           35.3382
         ],
         "description": [
-          "Why we're here: A wooded Zen temple in North Kamakura.",
-          "What to do: Walk the temple grounds and surrounding hillside lanes."
+          "Walk the temple grounds and surrounding hillside lanes."
         ],
         "maps": "https://www.google.com/maps/search/?api=1&query=35.3382%2C139.5473",
         "wiki": "https://en.wikipedia.org/wiki/Engaku-ji"
@@ -1900,8 +1699,7 @@
           35.0149
         ],
         "description": [
-          "Why we're here: A hillside temple with maple gardens and a seasonal evening opening.",
-          "What to do: Visit as an alternative to part of the Arashiyama day."
+          "Visit as an alternative to part of the Arashiyama day."
         ],
         "maps": "https://www.google.com/maps/search/?api=1&query=35.0149%2C135.7957",
         "wiki": "https://en.wikipedia.org/wiki/Eikan-d%C5%8D_Zenrin-ji"
@@ -1917,8 +1715,7 @@
           34.8539
         ],
         "description": [
-          "Why we're here: A forest walk and waterfall near Osaka.",
-          "What to do: Choose this as an alternative to the castle route."
+          "Choose this as an alternative to the castle route."
         ],
         "maps": "https://www.google.com/maps/search/?api=1&query=34.8539%2C135.4728",
         "wiki": "https://en.wikipedia.org/wiki/Minoo_Park"
@@ -1932,8 +1729,7 @@
           34.8664
         ],
         "description": [
-          "Why we're here: A mountain temple known for its red good-luck dolls.",
-          "What to do: Pair it with Minoo if you have time for the transfer."
+          "Pair it with Minoo if you have time for the transfer."
         ],
         "maps": "https://www.google.com/maps/search/?api=1&query=34.8664%2C135.4909",
         "wiki": "https://en.wikipedia.org/wiki/Katsu%C5%8D-ji"
@@ -1949,20 +1745,62 @@
           35.9982
         ],
         "description": [
-          "Why we're here: The December 2 float festival and fireworks.",
-          "What to do: Check the return train from Seibu-Chichibu and reserve it before going."
+          "Check the return train from Seibu-Chichibu and reserve it before going."
         ],
         "maps": "https://www.google.com/maps/search/?api=1&query=35.9982%2C139.0845",
         "wiki": "https://en.wikipedia.org/wiki/Chichibu_Night_Festival"
       }
     ]
-  }
+  },
+  "budget": [
+    {
+      "title": "Tokyo lodging · 5 nights",
+      "text": "Sakura Hotel Nippori starts at ¥8,000 per room. Sawanoya lists ¥16,280 with a shared bathroom or ¥17,930 with a private bathroom."
+    },
+    {
+      "title": "Kyoto lodging · 5 nights",
+      "text": "Budget ¥18k–36k per room per night near Shijo–Karasuma."
+    },
+    {
+      "title": "Kinosaki lodging · 1 night",
+      "text": "Room-only plans start at ¥15,620–¥19,800 for two. A stay with meals can start at ¥55,000."
+    },
+    {
+      "title": "Osaka lodging · 2 nights",
+      "text": "Budget ¥9k–18k per room per night near Tenma or Umeda."
+    },
+    {
+      "title": "Spending per person",
+      "text": "Trains ¥45k–65k, food ¥40k–75k, and admissions and extras ¥10k–20k. International flights and lodging are separate."
+    },
+    {
+      "title": "Return flight · Dec 3",
+      "text": "EVA Air BR197 from Narita Terminal 1 to Taipei. Depart at 2:00 PM Tokyo time (JST, UTC+9). Aim to reach the terminal at 10:30–11:00 AM Tokyo time. Taipei uses Taiwan time (UTC+8)."
+    },
+    {
+      "title": "Book ahead",
+      "text": "Kyoto and Kinosaki lodging, the Kinosaki train, and the Chichibu return train if you go."
+    }
+  ]
 }</script>
 <script id="basemap-style" type="application/json">{"version":8,"sources":{"ne2_shaded":{"maxzoom":6,"tileSize":256,"tiles":["https://tiles.openfreemap.org/natural_earth/ne2sr/{z}/{x}/{y}.png"],"type":"raster"},"openmaptiles":{"type":"vector","url":"https://tiles.openfreemap.org/planet","attribution":"© \u003ca href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors\u003c/a> · \u003ca href=\"https://openfreemap.org/\">OpenFreeMap\u003c/a>"}},"sprite":"https://tiles.openfreemap.org/sprites/ofm_f384/ofm","glyphs":"https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf","layers":[{"id":"background","type":"background","paint":{"background-color":"#f8f4f0"}},{"id":"natural_earth","type":"raster","source":"ne2_shaded","maxzoom":7,"paint":{"raster-opacity":["interpolate",["exponential",1.5],["zoom"],0,0.6,6,0.1]}},{"id":"park","type":"fill","source":"openmaptiles","source-layer":"park","filter":["match",["geometry-type"],["MultiPolygon","Polygon"],true,false],"paint":{"fill-color":"#d8e8c8","fill-opacity":0.7,"fill-outline-color":"rgba(95, 208, 100, 1)"}},{"id":"park_outline","type":"line","source":"openmaptiles","source-layer":"park","filter":["match",["geometry-type"],["MultiPolygon","Polygon"],true,false],"paint":{"line-color":"rgba(228, 241, 215, 1)","line-dasharray":[1,1.5]}},{"id":"landuse_residential","type":"fill","source":"openmaptiles","source-layer":"landuse","maxzoom":12,"filter":["==",["get","class"],"residential"],"paint":{"fill-color":["interpolate",["linear"],["zoom"],9,"hsla(0,3%,85%,0.84)",12,"hsla(35,57%,88%,0.49)"]}},{"id":"landcover_wood","type":"fill","source":"openmaptiles","source-layer":"landcover","filter":["==",["get","class"],"wood"],"paint":{"fill-antialias":false,"fill-color":"hsla(98,61%,72%,0.7)","fill-opacity":0.4}},{"id":"landcover_grass","type":"fill","source":"openmaptiles","source-layer":"landcover","filter":["==",["get","class"],"grass"],"paint":{"fill-antialias":false,"fill-color":"rgba(176, 213, 154, 1)","fill-opacity":0.3}},{"id":"landcover_ice","type":"fill","source":"openmaptiles","source-layer":"landcover","filter":["==",["get","class"],"ice"],"paint":{"fill-antialias":false,"fill-color":"rgba(224, 236, 236, 1)","fill-opacity":0.8}},{"id":"landcover_wetland","type":"fill","source":"openmaptiles","source-layer":"landcover","minzoom":12,"filter":["==",["get","class"],"wetland"],"paint":{"fill-antialias":true,"fill-opacity":0.8,"fill-pattern":"wetland_bg_11","fill-translate-anchor":"map"}},{"id":"landuse_pitch","type":"fill","source":"openmaptiles","source-layer":"landuse","filter":["==",["get","class"],"pitch"],"paint":{"fill-color":"#DEE3CD"}},{"id":"landuse_track","type":"fill","source":"openmaptiles","source-layer":"landuse","filter":["==",["get","class"],"track"],"paint":{"fill-color":"#DEE3CD"}},{"id":"landuse_cemetery","type":"fill","source":"openmaptiles","source-layer":"landuse","filter":["==",["get","class"],"cemetery"],"paint":{"fill-color":"hsl(75,37%,81%)"}},{"id":"landuse_hospital","type":"fill","source":"openmaptiles","source-layer":"landuse","filter":["==",["get","class"],"hospital"],"paint":{"fill-color":"#fde"}},{"id":"landuse_school","type":"fill","source":"openmaptiles","source-layer":"landuse","filter":["==",["get","class"],"school"],"paint":{"fill-color":"rgb(236,238,204)"}},{"id":"waterway_tunnel","type":"line","source":"openmaptiles","source-layer":"waterway","filter":["==",["get","brunnel"],"tunnel"],"paint":{"line-color":"#a0c8f0","line-dasharray":[3,3],"line-gap-width":["interpolate",["linear"],["zoom"],12,0,20,6],"line-opacity":1,"line-width":["interpolate",["exponential",1.4],["zoom"],8,1,20,2]}},{"id":"waterway_river","type":"line","source":"openmaptiles","source-layer":"waterway","filter":["all",["==",["get","class"],"river"],["!=",["get","brunnel"],"tunnel"]],"layout":{"line-cap":"round"},"paint":{"line-color":"#a0c8f0","line-width":["interpolate",["exponential",1.2],["zoom"],11,0.5,20,6]}},{"id":"waterway_other","type":"line","source":"openmaptiles","source-layer":"waterway","filter":["all",["!=",["get","class"],"river"],["!=",["get","brunnel"],"tunnel"]],"layout":{"line-cap":"round"},"paint":{"line-color":"#a0c8f0","line-width":["interpolate",["exponential",1.3],["zoom"],13,0.5,20,6]}},{"id":"water","type":"fill","source":"openmaptiles","source-layer":"water","filter":["!=",["get","brunnel"],"tunnel"],"paint":{"fill-color":"rgb(158,189,255)"}},{"id":"landcover_sand","type":"fill","source":"openmaptiles","source-layer":"landcover","filter":["==",["get","class"],"sand"],"paint":{"fill-color":"rgba(247, 239, 195, 1)"}},{"id":"aeroway_fill","type":"fill","source":"openmaptiles","source-layer":"aeroway","minzoom":11,"filter":["match",["geometry-type"],["MultiPolygon","Polygon"],true,false],"paint":{"fill-color":"rgba(229, 228, 224, 1)","fill-opacity":0.7}},{"id":"aeroway_runway","type":"line","source":"openmaptiles","source-layer":"aeroway","minzoom":11,"filter":["all",["match",["geometry-type"],["LineString","MultiLineString"],true,false],["==",["get","class"],"runway"]],"paint":{"line-color":"#f0ede9","line-width":["interpolate",["exponential",1.2],["zoom"],11,3,20,16]}},{"id":"aeroway_taxiway","type":"line","source":"openmaptiles","source-layer":"aeroway","minzoom":11,"filter":["all",["match",["geometry-type"],["LineString","MultiLineString"],true,false],["==",["get","class"],"taxiway"]],"paint":{"line-color":"#f0ede9","line-width":["interpolate",["exponential",1.2],["zoom"],11,0.5,20,6]}},{"id":"tunnel_motorway_link_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"motorway"],["==",["get","ramp"],1],["==",["get","brunnel"],"tunnel"]],"layout":{"line-join":"round"},"paint":{"line-color":"#e9ac77","line-dasharray":[0.5,0.25],"line-width":["interpolate",["exponential",1.2],["zoom"],12,1,13,3,14,4,20,15]}},{"id":"tunnel_service_track_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["match",["get","class"],["service","track"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#cfcdca","line-dasharray":[0.5,0.25],"line-width":["interpolate",["exponential",1.2],["zoom"],15,1,16,4,20,11]}},{"id":"tunnel_link_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","ramp"],1],["==",["get","brunnel"],"tunnel"]],"layout":{"line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],12,1,13,3,14,4,20,15]}},{"id":"tunnel_street_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["match",["get","class"],["street","street_limited"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#cfcdca","line-opacity":["interpolate",["linear"],["zoom"],12,0,12.5,1],"line-width":["interpolate",["exponential",1.2],["zoom"],12,0.5,13,1,14,4,20,15]}},{"id":"tunnel_secondary_tertiary_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["match",["get","class"],["secondary","tertiary"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],8,1.5,20,17]}},{"id":"tunnel_trunk_primary_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["match",["get","class"],["primary","trunk"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],5,0.4,6,0.7,7,1.75,20,22]}},{"id":"tunnel_motorway_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"motorway"],["!=",["get","ramp"],1],["==",["get","brunnel"],"tunnel"]],"layout":{"line-join":"round"},"paint":{"line-color":"#e9ac77","line-dasharray":[0.5,0.25],"line-width":["interpolate",["exponential",1.2],["zoom"],5,0.4,6,0.7,7,1.75,20,22]}},{"id":"tunnel_path_pedestrian","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["geometry-type"],["LineString","MultiLineString"],true,false],["==",["get","brunnel"],"tunnel"],["match",["get","class"],["path","pedestrian"],true,false]],"paint":{"line-color":"hsl(0,0%,100%)","line-dasharray":[1,0.75],"line-width":["interpolate",["exponential",1.2],["zoom"],14,0.5,20,10]}},{"id":"tunnel_motorway_link","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"motorway"],["==",["get","ramp"],1],["==",["get","brunnel"],"tunnel"]],"layout":{"line-join":"round"},"paint":{"line-color":"#fc8","line-width":["interpolate",["exponential",1.2],["zoom"],12.5,0,13,1.5,14,2.5,20,11.5]}},{"id":"tunnel_service_track","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["match",["get","class"],["service","track"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#fff","line-width":["interpolate",["exponential",1.2],["zoom"],15.5,0,16,2,20,7.5]}},{"id":"tunnel_link","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","ramp"],1],["==",["get","brunnel"],"tunnel"]],"layout":{"line-join":"round"},"paint":{"line-color":"#fff4c6","line-width":["interpolate",["exponential",1.2],["zoom"],12.5,0,13,1.5,14,2.5,20,11.5]}},{"id":"tunnel_minor","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["match",["get","class"],["minor"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#fff","line-width":["interpolate",["exponential",1.2],["zoom"],13.5,0,14,2.5,20,11.5]}},{"id":"tunnel_secondary_tertiary","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["match",["get","class"],["secondary","tertiary"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#fff4c6","line-width":["interpolate",["exponential",1.2],["zoom"],6.5,0,7,0.5,20,10]}},{"id":"tunnel_trunk_primary","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["match",["get","class"],["primary","trunk"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#fff4c6","line-width":["interpolate",["exponential",1.2],["zoom"],5,0,7,1,20,18]}},{"id":"tunnel_motorway","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"motorway"],["!=",["get","ramp"],1],["==",["get","brunnel"],"tunnel"]],"layout":{"line-join":"round"},"paint":{"line-color":"#ffdaa6","line-width":["interpolate",["exponential",1.2],["zoom"],5,0,7,1,20,18]}},{"id":"tunnel_major_rail","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["match",["get","class"],["rail"],true,false]],"paint":{"line-color":"#bbb","line-width":["interpolate",["exponential",1.4],["zoom"],14,0.4,15,0.75,20,2]}},{"id":"tunnel_major_rail_hatching","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["==",["get","class"],"rail"]],"paint":{"line-color":"#bbb","line-dasharray":[0.2,8],"line-width":["interpolate",["exponential",1.4],["zoom"],14.5,0,15,3,20,8]}},{"id":"tunnel_transit_rail","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["match",["get","class"],["transit"],true,false]],"paint":{"line-color":"#bbb","line-width":["interpolate",["exponential",1.4],["zoom"],14,0.4,15,0.75,20,2]}},{"id":"tunnel_transit_rail_hatching","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"tunnel"],["==",["get","class"],"transit"]],"paint":{"line-color":"#bbb","line-dasharray":[0.2,8],"line-width":["interpolate",["exponential",1.4],["zoom"],14.5,0,15,3,20,8]}},{"id":"road_area_pattern","type":"fill","source":"openmaptiles","source-layer":"transportation","filter":["match",["geometry-type"],["MultiPolygon","Polygon"],true,false],"paint":{"fill-pattern":"pedestrian_polygon"}},{"id":"road_motorway_link_casing","type":"line","source":"openmaptiles","source-layer":"transportation","minzoom":12,"filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["==",["get","class"],"motorway"],["==",["get","ramp"],1]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],12,1,13,3,14,4,20,15]}},{"id":"road_service_track_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["match",["get","class"],["service","track"],true,false]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"#cfcdca","line-width":["interpolate",["exponential",1.2],["zoom"],15,1,16,4,20,11]}},{"id":"road_link_casing","type":"line","source":"openmaptiles","source-layer":"transportation","minzoom":13,"filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["match",["get","class"],["motorway","path","pedestrian","service","track"],false,true],["==",["get","ramp"],1]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],12,1,13,3,14,4,20,15]}},{"id":"road_minor_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["geometry-type"],["LineString","MultiLineString"],true,false],["match",["get","brunnel"],["bridge","tunnel"],false,true],["match",["get","class"],["minor"],true,false],["!=",["get","ramp"],1]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"#cfcdca","line-opacity":["interpolate",["linear"],["zoom"],12,0,12.5,1],"line-width":["interpolate",["exponential",1.2],["zoom"],12,0.5,13,1,14,4,20,20]}},{"id":"road_secondary_tertiary_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["match",["get","class"],["secondary","tertiary"],true,false],["!=",["get","ramp"],1]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],8,1.5,20,17]}},{"id":"road_trunk_primary_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["match",["get","class"],["primary","trunk"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],5,0.4,6,0.7,7,1.75,20,22]}},{"id":"road_motorway_casing","type":"line","source":"openmaptiles","source-layer":"transportation","minzoom":5,"filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["==",["get","class"],"motorway"],["!=",["get","ramp"],1]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],5,0.4,6,0.7,7,1.75,20,22]}},{"id":"road_path_pedestrian","type":"line","source":"openmaptiles","source-layer":"transportation","minzoom":14,"filter":["all",["match",["geometry-type"],["LineString","MultiLineString"],true,false],["match",["get","brunnel"],["bridge","tunnel"],false,true],["match",["get","class"],["path","pedestrian"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"hsl(0,0%,100%)","line-dasharray":[1,0.7],"line-width":["interpolate",["exponential",1.2],["zoom"],14,1,20,10]}},{"id":"road_motorway_link","type":"line","source":"openmaptiles","source-layer":"transportation","minzoom":12,"filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["==",["get","class"],"motorway"],["==",["get","ramp"],1]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"#fc8","line-width":["interpolate",["exponential",1.2],["zoom"],12.5,0,13,1.5,14,2.5,20,11.5]}},{"id":"road_service_track","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["match",["get","class"],["service","track"],true,false]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"#fff","line-width":["interpolate",["exponential",1.2],["zoom"],15.5,0,16,2,20,7.5]}},{"id":"road_link","type":"line","source":"openmaptiles","source-layer":"transportation","minzoom":13,"filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["==",["get","ramp"],1],["match",["get","class"],["motorway","path","pedestrian","service","track"],false,true]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"#fea","line-width":["interpolate",["exponential",1.2],["zoom"],12.5,0,13,1.5,14,2.5,20,11.5]}},{"id":"road_minor","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["geometry-type"],["LineString","MultiLineString"],true,false],["match",["get","brunnel"],["bridge","tunnel"],false,true],["match",["get","class"],["minor"],true,false]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"#fff","line-width":["interpolate",["exponential",1.2],["zoom"],13.5,0,14,2.5,20,18]}},{"id":"road_secondary_tertiary","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["match",["get","class"],["secondary","tertiary"],true,false]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"#fea","line-width":["interpolate",["exponential",1.2],["zoom"],6.5,0,8,0.5,20,13]}},{"id":"road_trunk_primary","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["match",["get","class"],["primary","trunk"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#fea","line-width":["interpolate",["exponential",1.2],["zoom"],5,0,7,1,20,18]}},{"id":"road_motorway","type":"line","source":"openmaptiles","source-layer":"transportation","minzoom":5,"filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["==",["get","class"],"motorway"],["!=",["get","ramp"],1]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":["interpolate",["linear"],["zoom"],5,"hsl(26,87%,62%)",6,"#fc8"],"line-width":["interpolate",["exponential",1.2],["zoom"],5,0,7,1,20,18]}},{"id":"road_major_rail","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["==",["get","class"],"rail"]],"paint":{"line-color":"#bbb","line-width":["interpolate",["exponential",1.4],["zoom"],14,0.4,15,0.75,20,2]}},{"id":"road_major_rail_hatching","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["==",["get","class"],"rail"]],"paint":{"line-color":"#bbb","line-dasharray":[0.2,8],"line-width":["interpolate",["exponential",1.4],["zoom"],14.5,0,15,3,20,8]}},{"id":"road_transit_rail","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["==",["get","class"],"transit"]],"paint":{"line-color":"#bbb","line-width":["interpolate",["exponential",1.4],["zoom"],14,0.4,15,0.75,20,2]}},{"id":"road_transit_rail_hatching","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["get","brunnel"],["bridge","tunnel"],false,true],["==",["get","class"],"transit"]],"paint":{"line-color":"#bbb","line-dasharray":[0.2,8],"line-width":["interpolate",["exponential",1.4],["zoom"],14.5,0,15,3,20,8]}},{"id":"road_one_way_arrow","type":"symbol","source":"openmaptiles","source-layer":"transportation","minzoom":16,"filter":["==",["get","oneway"],1],"layout":{"icon-image":"arrow","symbol-placement":"line"}},{"id":"road_one_way_arrow_opposite","type":"symbol","source":"openmaptiles","source-layer":"transportation","minzoom":16,"filter":["==",["get","oneway"],-1],"layout":{"icon-image":"arrow","icon-rotate":180,"symbol-placement":"line"}},{"id":"bridge_motorway_link_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"motorway"],["==",["get","ramp"],1],["==",["get","brunnel"],"bridge"]],"layout":{"line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],12,1,13,3,14,4,20,15]}},{"id":"bridge_service_track_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"bridge"],["match",["get","class"],["service","track"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#cfcdca","line-width":["interpolate",["exponential",1.2],["zoom"],15,1,16,4,20,11]}},{"id":"bridge_link_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"link"],["==",["get","brunnel"],"bridge"]],"layout":{"line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],12,1,13,3,14,4,20,15]}},{"id":"bridge_street_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"bridge"],["match",["get","class"],["street","street_limited"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"hsl(36,6%,74%)","line-opacity":["interpolate",["linear"],["zoom"],12,0,12.5,1],"line-width":["interpolate",["exponential",1.2],["zoom"],12,0.5,13,1,14,4,20,25]}},{"id":"bridge_path_pedestrian_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["geometry-type"],["LineString","MultiLineString"],true,false],["==",["get","brunnel"],"bridge"],["match",["get","class"],["path","pedestrian"],true,false]],"paint":{"line-color":"hsl(35,6%,80%)","line-dasharray":[1,0],"line-width":["interpolate",["exponential",1.2],["zoom"],14,1.5,20,18]}},{"id":"bridge_secondary_tertiary_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"bridge"],["match",["get","class"],["secondary","tertiary"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],8,1.5,20,17]}},{"id":"bridge_trunk_primary_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"bridge"],["match",["get","class"],["primary","trunk"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],5,0.4,6,0.7,7,1.75,20,22]}},{"id":"bridge_motorway_casing","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"motorway"],["!=",["get","ramp"],1],["==",["get","brunnel"],"bridge"]],"layout":{"line-join":"round"},"paint":{"line-color":"#e9ac77","line-width":["interpolate",["exponential",1.2],["zoom"],5,0.4,6,0.7,7,1.75,20,22]}},{"id":"bridge_path_pedestrian","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["match",["geometry-type"],["LineString","MultiLineString"],true,false],["==",["get","brunnel"],"bridge"],["match",["get","class"],["path","pedestrian"],true,false]],"paint":{"line-color":"hsl(0,0%,100%)","line-dasharray":[1,0.3],"line-width":["interpolate",["exponential",1.2],["zoom"],14,0.5,20,10]}},{"id":"bridge_motorway_link","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"motorway"],["==",["get","ramp"],1],["==",["get","brunnel"],"bridge"]],"layout":{"line-join":"round"},"paint":{"line-color":"#fc8","line-width":["interpolate",["exponential",1.2],["zoom"],12.5,0,13,1.5,14,2.5,20,11.5]}},{"id":"bridge_service_track","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"bridge"],["match",["get","class"],["service","track"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#fff","line-width":["interpolate",["exponential",1.2],["zoom"],15.5,0,16,2,20,7.5]}},{"id":"bridge_link","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"link"],["==",["get","brunnel"],"bridge"]],"layout":{"line-join":"round"},"paint":{"line-color":"#fea","line-width":["interpolate",["exponential",1.2],["zoom"],12.5,0,13,1.5,14,2.5,20,11.5]}},{"id":"bridge_street","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"bridge"],["match",["get","class"],["minor"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#fff","line-width":["interpolate",["exponential",1.2],["zoom"],13.5,0,14,2.5,20,18]}},{"id":"bridge_secondary_tertiary","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"bridge"],["match",["get","class"],["secondary","tertiary"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#fea","line-width":["interpolate",["exponential",1.2],["zoom"],6.5,0,7,0.5,20,10]}},{"id":"bridge_trunk_primary","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","brunnel"],"bridge"],["match",["get","class"],["primary","trunk"],true,false]],"layout":{"line-join":"round"},"paint":{"line-color":"#fea","line-width":["interpolate",["exponential",1.2],["zoom"],5,0,7,1,20,18]}},{"id":"bridge_motorway","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"motorway"],["!=",["get","ramp"],1],["==",["get","brunnel"],"bridge"]],"layout":{"line-join":"round"},"paint":{"line-color":"#fc8","line-width":["interpolate",["exponential",1.2],["zoom"],5,0,7,1,20,18]}},{"id":"bridge_major_rail","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"rail"],["==",["get","brunnel"],"bridge"]],"paint":{"line-color":"#bbb","line-width":["interpolate",["exponential",1.4],["zoom"],14,0.4,15,0.75,20,2]}},{"id":"bridge_major_rail_hatching","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"rail"],["==",["get","brunnel"],"bridge"]],"paint":{"line-color":"#bbb","line-dasharray":[0.2,8],"line-width":["interpolate",["exponential",1.4],["zoom"],14.5,0,15,3,20,8]}},{"id":"bridge_transit_rail","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"transit"],["==",["get","brunnel"],"bridge"]],"paint":{"line-color":"#bbb","line-width":["interpolate",["exponential",1.4],["zoom"],14,0.4,15,0.75,20,2]}},{"id":"bridge_transit_rail_hatching","type":"line","source":"openmaptiles","source-layer":"transportation","filter":["all",["==",["get","class"],"transit"],["==",["get","brunnel"],"bridge"]],"paint":{"line-color":"#bbb","line-dasharray":[0.2,8],"line-width":["interpolate",["exponential",1.4],["zoom"],14.5,0,15,3,20,8]}},{"id":"building","type":"fill","source":"openmaptiles","source-layer":"building","minzoom":13,"maxzoom":14,"paint":{"fill-color":"hsl(35,8%,85%)","fill-outline-color":["interpolate",["linear"],["zoom"],13,"hsla(35,6%,79%,0.32)",14,"hsl(35,6%,79%)"]}},{"id":"building-3d","type":"fill-extrusion","source":"openmaptiles","source-layer":"building","minzoom":14,"filter":["!",["has","hide_3d"]],"paint":{"fill-extrusion-base":["get","render_min_height"],"fill-extrusion-color":"hsl(35,8%,85%)","fill-extrusion-height":["get","render_height"],"fill-extrusion-opacity":0.8}},{"id":"boundary_3","type":"line","source":"openmaptiles","source-layer":"boundary","minzoom":5,"filter":["all",["==",["typeof",["get","admin_level"]],"number"],[">=",["get","admin_level"],3],["\u003c=",["get","admin_level"],6],["!=",["get","maritime"],1],["!=",["get","disputed"],1],["!",["has","claimed_by"]]],"paint":{"line-color":"hsl(0,0%,70%)","line-dasharray":[1,1],"line-width":["interpolate",["linear",1],["zoom"],7,1,11,2]}},{"id":"boundary_2","type":"line","source":"openmaptiles","source-layer":"boundary","filter":["all",["==",["get","admin_level"],2],["!=",["get","maritime"],1],["!=",["get","disputed"],1],["!",["has","claimed_by"]]],"layout":{"line-cap":"round","line-join":"round"},"paint":{"line-color":"hsl(248,1%,41%)","line-opacity":["interpolate",["linear"],["zoom"],0,0.4,4,1],"line-width":["interpolate",["linear"],["zoom"],3,1,5,1.2,12,3]}},{"id":"boundary_disputed","type":"line","source":"openmaptiles","source-layer":"boundary","filter":["all",["!=",["get","maritime"],1],["==",["get","disputed"],1]],"paint":{"line-color":"hsl(248,1%,41%)","line-dasharray":[1,2],"line-width":["interpolate",["linear"],["zoom"],3,1,5,1.2,12,3]}},{"id":"waterway_line_label","type":"symbol","source":"openmaptiles","source-layer":"waterway","minzoom":10,"filter":["match",["geometry-type"],["LineString","MultiLineString"],true,false],"layout":{"symbol-placement":"line","symbol-spacing":350,"text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Italic"],"text-letter-spacing":0.2,"text-max-width":5,"text-size":14},"paint":{"text-color":"#74aee9","text-halo-color":"rgba(255,255,255,0.7)","text-halo-width":1.5}},{"id":"water_name_point_label","type":"symbol","source":"openmaptiles","source-layer":"water_name","filter":["match",["geometry-type"],["MultiPoint","Point"],true,false],"layout":{"text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Italic"],"text-letter-spacing":0.2,"text-max-width":5,"text-size":["interpolate",["linear"],["zoom"],0,10,8,14]},"paint":{"text-color":"#495e91","text-halo-color":"rgba(255,255,255,0.7)","text-halo-width":1.5}},{"id":"water_name_line_label","type":"symbol","source":"openmaptiles","source-layer":"water_name","filter":["match",["geometry-type"],["LineString","MultiLineString"],true,false],"layout":{"symbol-placement":"line","symbol-spacing":350,"text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Italic"],"text-letter-spacing":0.2,"text-max-width":5,"text-size":14},"paint":{"text-color":"#495e91","text-halo-color":"rgba(255,255,255,0.7)","text-halo-width":1.5}},{"id":"poi_r20","type":"symbol","source":"openmaptiles","source-layer":"poi","minzoom":17,"filter":["all",["match",["geometry-type"],["MultiPoint","Point"],true,false],[">=",["get","rank"],20]],"layout":{"icon-image":["match",["get","subclass"],["florist","furniture"],["get","subclass"],["get","class"]],"text-anchor":"top","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Italic"],"text-max-width":9,"text-offset":[0,0.6],"text-size":12},"paint":{"text-color":"#666","text-halo-blur":0.5,"text-halo-color":"#ffffff","text-halo-width":1}},{"id":"poi_r7","type":"symbol","source":"openmaptiles","source-layer":"poi","minzoom":16,"filter":["all",["match",["geometry-type"],["MultiPoint","Point"],true,false],[">=",["get","rank"],7],["\u003c",["get","rank"],20]],"layout":{"icon-image":["match",["get","subclass"],["florist","furniture"],["get","subclass"],["get","class"]],"text-anchor":"top","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Italic"],"text-max-width":9,"text-offset":[0,0.6],"text-size":12},"paint":{"text-color":"#666","text-halo-blur":0.5,"text-halo-color":"#ffffff","text-halo-width":1}},{"id":"poi_r1","type":"symbol","source":"openmaptiles","source-layer":"poi","minzoom":15,"filter":["all",["match",["geometry-type"],["MultiPoint","Point"],true,false],[">=",["get","rank"],1],["\u003c",["get","rank"],7]],"layout":{"icon-image":["match",["get","subclass"],["florist","furniture"],["get","subclass"],["get","class"]],"text-anchor":"top","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Italic"],"text-max-width":9,"text-offset":[0,0.6],"text-size":12},"paint":{"text-color":"#666","text-halo-blur":0.5,"text-halo-color":"#ffffff","text-halo-width":1}},{"id":"poi_transit","type":"symbol","source":"openmaptiles","source-layer":"poi","filter":["match",["get","class"],["airport","bus","rail"],true,false],"layout":{"icon-image":["to-string",["get","class"]],"icon-size":0.7,"text-anchor":"left","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Italic"],"text-max-width":9,"text-offset":[0.9,0],"text-size":12},"paint":{"text-color":"#2e5a80","text-halo-blur":0.5,"text-halo-color":"#ffffff","text-halo-width":1}},{"id":"highway-name-path","type":"symbol","source":"openmaptiles","source-layer":"transportation_name","minzoom":15.5,"filter":["==",["get","class"],"path"],"layout":{"symbol-placement":"line","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Regular"],"text-rotation-alignment":"map","text-size":["interpolate",["linear"],["zoom"],13,12,14,13]},"paint":{"text-color":"hsl(30,23%,62%)","text-halo-color":"#f8f4f0","text-halo-width":0.5}},{"id":"highway-name-minor","type":"symbol","source":"openmaptiles","source-layer":"transportation_name","minzoom":15,"filter":["all",["match",["geometry-type"],["LineString","MultiLineString"],true,false],["match",["get","class"],["minor","service","track"],true,false]],"layout":{"symbol-placement":"line","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Regular"],"text-rotation-alignment":"map","text-size":["interpolate",["linear"],["zoom"],13,12,14,13]},"paint":{"text-color":"#666","text-halo-blur":0.5,"text-halo-width":1}},{"id":"highway-name-major","type":"symbol","source":"openmaptiles","source-layer":"transportation_name","minzoom":12.2,"filter":["match",["get","class"],["primary","secondary","tertiary","trunk"],true,false],"layout":{"symbol-placement":"line","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Regular"],"text-rotation-alignment":"map","text-size":["interpolate",["linear"],["zoom"],13,12,14,13]},"paint":{"text-color":"#666","text-halo-blur":0.5,"text-halo-width":1}},{"id":"highway-shield-non-us","type":"symbol","source":"openmaptiles","source-layer":"transportation_name","minzoom":8,"filter":["all",["\u003c=",["get","ref_length"],6],["match",["geometry-type"],["LineString","MultiLineString"],true,false],["match",["get","network"],["us-highway","us-interstate","us-state"],false,true]],"layout":{"icon-image":["concat","road_",["get","ref_length"]],"icon-rotation-alignment":"viewport","icon-size":1,"symbol-placement":["step",["zoom"],"point",11,"line"],"symbol-spacing":200,"text-field":["to-string",["get","ref"]],"text-font":["Noto Sans Regular"],"text-rotation-alignment":"viewport","text-size":10}},{"id":"highway-shield-us-interstate","type":"symbol","source":"openmaptiles","source-layer":"transportation_name","minzoom":7,"filter":["all",["\u003c=",["get","ref_length"],6],["match",["geometry-type"],["LineString","MultiLineString"],true,false],["match",["get","network"],["us-interstate"],true,false]],"layout":{"icon-image":["concat",["get","network"],"_",["get","ref_length"]],"icon-rotation-alignment":"viewport","icon-size":1,"symbol-placement":["step",["zoom"],"point",7,"line",8,"line"],"symbol-spacing":200,"text-field":["to-string",["get","ref"]],"text-font":["Noto Sans Regular"],"text-rotation-alignment":"viewport","text-size":10}},{"id":"road_shield_us","type":"symbol","source":"openmaptiles","source-layer":"transportation_name","minzoom":9,"filter":["all",["\u003c=",["get","ref_length"],6],["match",["geometry-type"],["LineString","MultiLineString"],true,false],["match",["get","network"],["us-highway","us-state"],true,false]],"layout":{"icon-image":["concat",["get","network"],"_",["get","ref_length"]],"icon-rotation-alignment":"viewport","icon-size":1,"symbol-placement":["step",["zoom"],"point",11,"line"],"symbol-spacing":200,"text-field":["to-string",["get","ref"]],"text-font":["Noto Sans Regular"],"text-rotation-alignment":"viewport","text-size":10}},{"id":"airport","type":"symbol","source":"openmaptiles","source-layer":"aerodrome_label","minzoom":10,"filter":["all",["has","iata"]],"layout":{"icon-image":"airport_11","icon-size":1,"text-anchor":"top","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Regular"],"text-max-width":9,"text-offset":[0,0.6],"text-optional":true,"text-padding":2,"text-size":12},"paint":{"text-color":"#666","text-halo-blur":0.5,"text-halo-color":"#ffffff","text-halo-width":1}},{"id":"label_other","type":"symbol","source":"openmaptiles","source-layer":"place","minzoom":8,"filter":["match",["get","class"],["city","continent","country","state","town","village"],false,true],"layout":{"text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Italic"],"text-letter-spacing":0.1,"text-max-width":9,"text-size":["interpolate",["linear"],["zoom"],8,9,12,10],"text-transform":"uppercase"},"paint":{"text-color":"#333","text-halo-blur":1,"text-halo-color":"#fff","text-halo-width":1}},{"id":"label_village","type":"symbol","source":"openmaptiles","source-layer":"place","minzoom":9,"filter":["==",["get","class"],"village"],"layout":{"icon-allow-overlap":true,"icon-image":["step",["zoom"],"circle_11_black",10,""],"icon-optional":false,"icon-size":0.2,"text-anchor":"bottom","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Regular"],"text-max-width":8,"text-size":["interpolate",["exponential",1.2],["zoom"],7,10,11,12]},"paint":{"text-color":"#000","text-halo-blur":1,"text-halo-color":"#fff","text-halo-width":1}},{"id":"label_town","type":"symbol","source":"openmaptiles","source-layer":"place","minzoom":6,"filter":["==",["get","class"],"town"],"layout":{"icon-allow-overlap":true,"icon-image":["step",["zoom"],"circle_11_black",10,""],"icon-optional":false,"icon-size":0.2,"text-anchor":"bottom","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Regular"],"text-max-width":8,"text-size":["interpolate",["exponential",1.2],["zoom"],7,12,11,14]},"paint":{"text-color":"#000","text-halo-blur":1,"text-halo-color":"#fff","text-halo-width":1}},{"id":"label_state","type":"symbol","source":"openmaptiles","source-layer":"place","minzoom":5,"maxzoom":8,"filter":["==",["get","class"],"state"],"layout":{"text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Italic"],"text-letter-spacing":0.2,"text-max-width":9,"text-size":["interpolate",["linear"],["zoom"],5,10,8,14],"text-transform":"uppercase"},"paint":{"text-color":"#333","text-halo-blur":1,"text-halo-color":"#fff","text-halo-width":1}},{"id":"label_city","type":"symbol","source":"openmaptiles","source-layer":"place","minzoom":3,"filter":["all",["==",["get","class"],"city"],["!=",["get","capital"],2]],"layout":{"icon-allow-overlap":true,"icon-image":["step",["zoom"],"circle_11_black",9,""],"icon-optional":false,"icon-size":0.4,"text-anchor":"bottom","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Regular"],"text-max-width":8,"text-offset":[0,-0.1],"text-size":["interpolate",["exponential",1.2],["zoom"],4,11,7,13,11,18]},"paint":{"text-color":"#000","text-halo-blur":1,"text-halo-color":"#fff","text-halo-width":1}},{"id":"label_city_capital","type":"symbol","source":"openmaptiles","source-layer":"place","minzoom":3,"filter":["all",["==",["get","class"],"city"],["==",["get","capital"],2]],"layout":{"icon-allow-overlap":true,"icon-image":["step",["zoom"],"circle_11_black",9,""],"icon-optional":false,"icon-size":0.5,"text-anchor":"bottom","text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Bold"],"text-max-width":8,"text-offset":[0,-0.2],"text-size":["interpolate",["exponential",1.2],["zoom"],4,12,7,14,11,20]},"paint":{"text-color":"#000","text-halo-blur":1,"text-halo-color":"#fff","text-halo-width":1}},{"id":"label_country_3","type":"symbol","source":"openmaptiles","source-layer":"place","minzoom":2,"maxzoom":9,"filter":["all",["==",["get","class"],"country"],[">=",["get","rank"],3]],"layout":{"text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Bold"],"text-max-width":6.25,"text-size":["interpolate",["linear"],["zoom"],3,9,7,17]},"paint":{"text-color":"#000","text-halo-blur":1,"text-halo-color":"#fff","text-halo-width":1}},{"id":"label_country_2","type":"symbol","source":"openmaptiles","source-layer":"place","maxzoom":9,"filter":["all",["==",["get","class"],"country"],["==",["get","rank"],2]],"layout":{"text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Bold"],"text-max-width":6.25,"text-size":["interpolate",["linear"],["zoom"],2,9,5,17]},"paint":{"text-color":"#000","text-halo-blur":1,"text-halo-color":"#fff","text-halo-width":1}},{"id":"label_country_1","type":"symbol","source":"openmaptiles","source-layer":"place","maxzoom":9,"filter":["all",["==",["get","class"],"country"],["==",["get","rank"],1]],"layout":{"text-field":["coalesce",["get","name_en"],["get","name:en"],["get","name:latin"],""],"text-font":["Noto Sans Bold"],"text-max-width":6.25,"text-size":["interpolate",["linear"],["zoom"],1,9,4,17]},"paint":{"text-color":"#000","text-halo-blur":1,"text-halo-color":"#fff","text-halo-width":1}}]}</script>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
   const {days, stays, budget, extras} = JSON.parse(document.getElementById('atlas-data').textContent);
   const style = JSON.parse(document.getElementById('basemap-style').textContent);
+  // Tile providers sometimes put native characters in the nominally Latin field.
+  // Preserve English and romanized place names, and omit labels without a Latin spelling.
+  const romanCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 -–—_.,:;/'’()&·+!?#°éèêëàáäåçíïñóöøúüýÿāīūēōĀĪŪĒŌ";
+  const maxLabelLength = 56;
+  const label = ['var','label'];
+  const romanOnly = ['all',['<=',['length',label],maxLabelLength],
+    ...Array.from({length:maxLabelLength},(_,i)=>['in',['slice',label,i,i+1],romanCharacters])];
+  for (const layer of style.layers) {
+    const textField = layer.layout?.['text-field'];
+    if (textField) {
+      layer.layout['text-field'] = ['let','label',['to-string',textField],['case',romanOnly,label,'']];
+    }
+  }
   const rate = 158.84;
   const yen = new Intl.NumberFormat('en-US', {style:'currency',currency:'JPY',maximumFractionDigits:0});
   const usd = new Intl.NumberFormat('en-US', {style:'currency',currency:'USD',maximumFractionDigits:0});
@@ -1987,11 +1825,11 @@ window.addEventListener('DOMContentLoaded', () => {
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const first = days[0].stops;
   const routeBases = [
-    {title:'Tokyo', desc:'20–23 Nov · Four nights · Old neighborhoods, markets and modern Tokyo', day:0, pos:first[1].pos},
-    {title:'Kyoto', desc:'24–28 Nov · Five nights · Temples, hillside lanes, Uji and Nara', day:4, pos:stays[1].pos},
-    {title:'Kinosaki Onsen', desc:'29 Nov · One night · Traditional inn, hot springs and canals', day:9, pos:stays[2].pos},
-    {title:'Osaka', desc:'30 Nov–1 Dec · Two nights · Food streets, Himeji or Minoo', day:10, pos:stays[3].pos},
-    {title:'Tokyo → Narita', desc:'2–3 Dec · Final night · Optional festival and departure', day:12, pos:first[0].pos},
+    {title:'Tokyo', desc:'Nov 20–24 · 4 nights', day:0, pos:first[1].pos},
+    {title:'Kyoto', desc:'Nov 24–29 · 5 nights', day:4, pos:stays[1].pos},
+    {title:'Kinosaki Hot Springs', desc:'Nov 29–30 · 1 night', day:9, pos:stays[2].pos},
+    {title:'Osaka', desc:'Nov 30–Dec 2 · 2 nights', day:10, pos:stays[3].pos},
+    {title:'Tokyo and Narita', desc:'Dec 2–3 · 1 night', day:12, pos:first[0].pos},
   ];
   const link = (url,label) => url?.startsWith('https://') ? `<a class="action" href="${html(url)}" target="_blank" rel="noopener noreferrer">${html(label)}</a>` : '';
   const photo = (url, alt) => url?.startsWith('https://') ? `<img src="${html(url)}" alt="${html(alt)}" referrerpolicy="no-referrer" loading="lazy">` : '';
@@ -1999,44 +1837,44 @@ window.addEventListener('DOMContentLoaded', () => {
   const dateButtons = () => days.map((d,i) => `<button type="button" class="day" data-day="${i}" aria-pressed="${i===dayIndex}" aria-label="${html(d.day+' '+d.number+' '+d.month)}"><small>${html(d.day)}</small><b>${d.number}</b><small>${html(d.month)}</small></button>`).join('');
   function placeCard(stop, i, optional = false) {
     const open = stop.id === activeStop;
-    return `<article class="place" aria-current="${open}"><button type="button" class="place-head" data-stop="${html(stop.id)}" aria-expanded="${open}"><span class="pin-num">${optional ? '↗' : String(i+1).padStart(2,'0')}</span><span><b>${html(stop.name)}</b><small>${html(stop.kind)}</small></span><span aria-hidden="true">›</span></button>${open ? `<div class="place-body">${photo(stop.photo,stop.name)}${stop.description.map(line=>{const index=line.indexOf(':');return index<0?`<p>${copy(line)}</p>`:`<p><strong>${html(line.slice(0,index+1))}</strong> ${copy(line.slice(index+1).trim())}</p>`;}).join('')}<div class="actions">${link(stop.maps,'↗ Find this place')}${link(stop.wiki,'Photos / background')}</div></div>` : ''}</article>`;
+    return `<article class="place" aria-current="${open}"><button type="button" class="place-head" data-stop="${html(stop.id)}" aria-expanded="${open}"><span class="pin-num">${optional ? '↗' : String(i+1).padStart(2,'0')}</span><span><b>${html(stop.name)}</b><small>${html(stop.kind)}</small></span><span aria-hidden="true">›</span></button>${open ? `<div class="place-body">${photo(stop.photo,stop.name)}${stop.description.map(line=>{const index=line.indexOf(':');return index<0?`<p>${copy(line)}</p>`:`<p><strong>${html(line.slice(0,index+1))}</strong> ${copy(line.slice(index+1).trim())}</p>`;}).join('')}<div class="actions">${link(stop.maps,'Map')}${link(stop.wiki,'Photos')}</div></div>` : ''}</article>`;
   }
   function renderDay() {
     const d = days[dayIndex];
     const opts = optionalIndex(dayIndex);
-    panel.innerHTML = `<span class="eyebrow">Choose a day</span><div class="day-scroll" aria-label="Trip dates">${dateButtons()}</div>
+    panel.innerHTML = `<div class="day-scroll" aria-label="Trip dates">${dateButtons()}</div>
       <div class="hero">${photo(d.photo,d.title+' reference photograph')}<div><span class="eyebrow">${html(d.label)}</span><h2>${html(d.title)}</h2><p>${html(d.base)}</p></div></div>
-      <div class="chips"><span class="chip cost">${copy(d.cost)}</span><span class="chip">✦ ${html(d.tag)}</span><span class="chip">${d.stops.length} stops</span></div>
+      <div class="chips"><span class="chip cost">${copy(d.cost)}</span></div>
       <p class="intro">${html(d.intro)}</p>
-      <div class="stay-callout">${d.stay>=0 ? `<b>Tonight: ${html(d.hotel)}</b><small>Suggested lodging · availability unconfirmed</small><button type="button" data-stay-jump="${d.stay}">Compare hotels &amp; prices ↗</button>` : html(d.hotel)}</div>
-      <div class="section-label"><span>Explore in this order</span><span>${d.stops.length} stops</span></div>
+      ${d.stay>=0 ? `<div class="stay-callout"><button type="button" data-stay-jump="${d.stay}">Compare hotels</button></div>` : ''}
+      <div class="section-label">Stops</div>
       <div class="places">${d.stops.map((s,i)=>placeCard(s,i)).join('')}</div>
-      ${opts.length ? `<div class="callout"><b>Flexible alternative</b> · ${html(opts.map(s=>s.name).join(' · '))}<div class="actions"><button class="action" data-optional type="button" aria-pressed="${showOptional}">${showOptional?'Hide':'Show'} optional pins</button></div></div>` : ''}
+      ${opts.length ? `<div class="callout"><b>Optional</b> · ${html(opts.map(s=>s.name).join(' · '))}<div class="actions"><button class="action" data-optional type="button" aria-pressed="${showOptional}">${showOptional?'Hide':'Show'} optional pins</button></div></div>` : ''}
       ${showOptional && opts.length ? `<div class="places">${opts.map((s,i)=>placeCard(s,i,true)).join('')}</div>` : ''}
       <div class="actions">${link(d.transit,d.transitLabel)}<button class="action" data-fit type="button">Fit day’s stops</button></div>
-      <p class="note">For turn-by-turn directions, use the transit link or open an individual stop in Google Maps. Check opening hours before visiting.</p>`;
+      `;
     const scroll = panel.querySelector('.day-scroll');
     scroll.scrollLeft = dayScroll;
   }
   function renderOverview() {
-    panel.innerHTML = `<span class="eyebrow">Understand the geography</span><h2 class="panel-title">One trip, five stays.</h2>
-      <p class="intro">Tokyo → Kyoto → Kinosaki Onsen → Osaka → Tokyo. Day trips branch out from these bases.</p>
+    panel.innerHTML = `<h2 class="panel-title">Trip route</h2>
+      
       ${routeBases.map((b,i)=>`<button type="button" class="route-step" data-day="${b.day}"><span class="pin-num">${String(i+1).padStart(2,'0')}</span><span><b>${html(b.title)}</b><small>${html(b.desc)}</small></span><span aria-hidden="true">↗</span></button>`).join('')}
-      <div class="callout">Spend time where the atmosphere changes: old neighborhoods, working markets, historic temples and a mountain hot-spring town.</div>
+      
       <button type="button" class="action" data-fit>Show entire route</button>`;
   }
   function renderStays() {
     const stay=stays[stayIndex];
-    panel.innerHTML=`<span class="eyebrow">13 nights · 5 check-ins</span><h2 class="panel-title">Sleep somewhere worth it.</h2>
-      <p class="intro">Compare budget rooms and traditional inns for two adults. Select a base to see the hotel areas.</p>
+    panel.innerHTML=`<h2 class="panel-title">Hotels</h2>
+      <p class="intro">Rooms for two. Select a city to compare.</p>
       <div class="stay-scroll">${stays.map((s,i)=>`<button type="button" class="stay-tab" data-stay="${i}" aria-pressed="${i===stayIndex}">${html(s.label)}<small>${html(s.dates)}</small></button>`).join('')}</div>
       <span class="eyebrow">${html(stay.meta)}</span><h3>${html(stay.title)}</h3>
       ${stay.details.map(line=>`<p class="note">${copy(line)}</p>`).join('')}
-      ${stay.cards.map((h,i)=>`<article class="hotel" id="hotel-${i}"><span class="eyebrow">${html(h.badge)}</span><h4>${html(h.heading)}</h4>
+      ${stay.cards.map((h,i)=>`<article class="hotel" id="hotel-${i}"><h4>${html(h.heading)}</h4>
         ${h.details.map(line=>`<p>${copy(line)}</p>`).join('')}<div class="rates">${h.rates.map(line=>`<p>${copy(line)}</p>`).join('')}</div>
         <div class="actions">${h.links.map(a=>link(a.url,a.text)).join('')}</div></article>`).join('')}
-      <div class="callout">Hotel markers indicate approximate neighborhoods. Use each hotel’s Google Maps link for the exact location. Rates are per room for two unless stated otherwise.</div>
-      <p class="note"><b>Booking order</b> · Kyoto, Kinosaki, Tokyo, Osaka.</p><p class="fx">${rateNote()}</p>`;
+      <p class="note">Hotel pins show approximate areas. Rates are per room for two.</p>
+      <p class="fx">${rateNote()}</p>`;
     const active = panel.querySelector('[data-stay][aria-pressed=true]');
     if (active) {
       const strip = active.parentElement;
@@ -2047,10 +1885,10 @@ window.addEventListener('DOMContentLoaded', () => {
     return `USD estimates use ¥${rate} per US$1 on Nov 11, 2026. <a href="https://www.boj.or.jp/en/statistics/market/forex/fxdaily/fxlist/fx261111.pdf" target="_blank" rel="noopener noreferrer">Bank of Japan</a>.`;
   }
   function renderBudget() {
-    panel.innerHTML=`<span class="eyebrow">Trip estimates</span><h2 class="panel-title">Cost &amp; logistics</h2>
-      <p class="intro">Prices are shown in Japanese yen and approximate U.S. dollars. Hotel prices are per shared room.</p><p class="fx">${rateNote()}</p>
+    panel.innerHTML=`<h2 class="panel-title">Budget and travel</h2>
+      <p class="fx">${rateNote()}</p>
       ${budget.map(item=>`<article class="budget-item"><h3>${html(item.title)}</h3><p>${copy(item.text)}</p></article>`).join('')}
-      <p class="note">Prices and availability can change. Check train schedules and reservations before departure.</p>`;
+      `;
   }
   function render() {
     const focused = document.activeElement;
@@ -2165,7 +2003,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if(currentMode==='day'){
       const d=days[dayIndex], opts=showOptional?optionalIndex(dayIndex):[];
       const active=[...d.stops,...opts].find(s=>s.id===activeStop);
-      mapText(d.label,active?.name ?? d.title,active?.description[0]?.replace(/^Why we're here: /,'') ?? 'Select a numbered pin or place card to learn more');
+      mapText(d.label,active?.name ?? d.title,active?.description[0]?.replace(/^Why we're here: /,'') ?? 'Select a pin or stop');
       d.stops.forEach((s,i)=>addPin(s,i+1,s.optional?'optional':'',()=>selectStop(s.id,true)));
       opts.forEach(s=>addPin(s,'+', 'optional',()=>selectStop(s.id,true)));
       setLine(d.stops.filter(s=>!s.optional).map(s=>s.pos));
@@ -2174,7 +2012,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     if(currentMode==='stays'){
       const stay=stays[stayIndex];
-      mapText('Hotel neighborhoods',stay.title,'House markers show hotel areas. Numbered markers show nearby stops.');
+      mapText('Hotel neighborhoods',stay.title,'Hotel areas and nearby stops.');
       stay.cards.forEach((h,i)=>addPin({name:h.heading,pos:h.pos,maps:h.links.find(l=>l.text.includes('Maps'))?.url},'⌂','base',()=>{
         showPopup({name:h.heading,pos:h.pos,maps:h.links.find(l=>l.text.includes('Maps'))?.url});
         const card=document.getElementById('hotel-'+i);
@@ -2186,7 +2024,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if(fit)mapBounds([...stay.cards.map(h=>h.pos),...nearby.map(s=>s.pos)]);
       return;
     }
-    mapText('The complete route','Japan, north to south','Orange pins mark your lodging bases and departure airport.');
+    mapText('Japan','Trip route','Orange pins show stays and the departure airport.');
     routeBases.forEach((base,i)=>addPin({name:base.title,pos:base.pos},i+1,'base',()=>chooseDay(base.day)));
     setLine([routeBases[0].pos,...routeBases.slice(1,4).map(x=>x.pos),routeBases[0].pos,routeBases[4].pos]);
     if(fit)mapBounds(routeBases.map(b=>b.pos),true);
